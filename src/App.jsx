@@ -227,6 +227,8 @@ export default function App() {
       desc: "Every tree has different needs. Our certified arborist evaluates tree health, structural integrity, soil quality, and potential risks to provide tailored care recommendations.",
       icon: "assessment",
       img: "assets/service_assessment.jpg?v=5",
+      imgWebp: "assets/service_assessment.webp?v=1",
+      imgAvif: "assets/service_assessment.avif?v=1",
       points: [
         "Evaluation of structural hazards and disease",
         "Soil condition and root flare inspections",
@@ -239,6 +241,8 @@ export default function App() {
       desc: "Proper pruning helps trees grow stronger while improving their overall appearance and safety. Our crew uses ISA canopy techniques to shape your trees beautifully.",
       icon: "pruning",
       img: "assets/service_pruning.jpg?v=5",
+      imgWebp: "assets/service_pruning.webp?v=1",
+      imgAvif: "assets/service_pruning.avif?v=1",
       points: [
         "Crown thinning for improved air & light flow",
         "Deadwooding and safety clearing of heavy branches",
@@ -251,6 +255,8 @@ export default function App() {
       desc: "When a tree becomes dangerous, diseased, or unwanted, professional removal is the best path. We employ top rigging safety systems to fell trees with minimal landscape impact.",
       icon: "removal",
       img: "assets/service_removal.jpg?v=5",
+      imgWebp: "assets/service_removal.webp?v=1",
+      imgAvif: "assets/service_removal.avif?v=1",
       points: [
         "Hazardous and leaning tree removal",
         "Storm-damaged structure extraction",
@@ -263,6 +269,8 @@ export default function App() {
       desc: "Old stumps can invite pests and ruin lawn layouts. We use high-powered hydraulic grinders to pulverize stumps below grade, leaving space ready for planting.",
       icon: "stump",
       img: "assets/service_stump.jpg?v=5",
+      imgWebp: "assets/service_stump.webp?v=1",
+      imgAvif: "assets/service_stump.avif?v=1",
       points: [
         "Deep root grinding down to 12 inches below soil",
         "Yard and root zone preparation for replanting",
@@ -275,6 +283,8 @@ export default function App() {
       desc: "Unexpected tree failures require immediate, skilled intervention. Our emergency crew is ready to secure your roofline, vehicles, and driveways as soon as possible.",
       icon: "emergency",
       img: "assets/service_emergency.jpg?v=5",
+      imgWebp: "assets/service_emergency.webp?v=1",
+      imgAvif: "assets/service_emergency.avif?v=1",
       points: [
         "Immediate hazard stabilization",
         "Storm cleanup and damage control",
@@ -426,11 +436,19 @@ export default function App() {
 
            <div className="hero-composition-wrapper">
             <div className="hero-main-frame">
-              <img src="assets/hero_arborist.jpg?v=3" alt="Professional Arborist at work in Newark" width="800" height="446" />
+              <picture>
+                <source srcSet="assets/hero_arborist.avif?v=1" type="image/avif" />
+                <source srcSet="assets/hero_arborist.webp?v=1" type="image/webp" />
+                <img src="assets/hero_arborist.jpg?v=3" alt="Professional Arborist at work in Newark" width="800" height="446" fetchpriority="high" />
+              </picture>
             </div>
             
             <div className="hero-secondary-card">
-              <img src="assets/estate.jpg?v=3" alt="Beautiful Estate Tree Care" width="800" height="446" />
+              <picture>
+                <source srcSet="assets/estate.avif?v=1" type="image/avif" />
+                <source srcSet="assets/estate.webp?v=1" type="image/webp" />
+                <img src="assets/estate.jpg?v=3" alt="Beautiful Estate Tree Care" width="800" height="446" />
+              </picture>
               <div className="hero-secondary-badge">
                 <span>✓ Property Care Excellence</span>
               </div>
@@ -443,7 +461,7 @@ export default function App() {
       <div id="about" className="about-page-wrapper">
         
         {/* SUB-SECTION 1: HERO */}
-        <div className="about-hero" style={{ backgroundImage: "url('assets/estate.jpg')" }}>
+        <div className="about-hero" style={{ backgroundImage: "image-set(url('assets/estate.avif') type('image/avif'), url('assets/estate.webp') type('image/webp'), url('assets/estate.jpg') type('image/jpeg'))" }}>
           <div className="about-hero-overlay"></div>
           <div className="about-hero-content container">
             <h1 className="about-hero-title">Growing Strong Trees.<br/>Building Lasting Trust.</h1>
@@ -478,7 +496,11 @@ export default function App() {
               <div className="overview-asymmetric-photo">
                 <div className="photo-backing-card"></div>
                 <div className="photo-front-frame">
-                  <img src="assets/tree_services.jpg?v=3" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" />
+                  <picture>
+                    <source srcSet="assets/tree_services.avif?v=1" type="image/avif" />
+                    <source srcSet="assets/tree_services.webp?v=1" type="image/webp" />
+                    <img src="assets/tree_services.jpg?v=3" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" />
+                  </picture>
                 </div>
               </div>
               
@@ -599,18 +621,22 @@ export default function App() {
               minHeight: '220px',
               position: 'relative'
             }}>
-              <img 
-                src={serviceDetails[activeServiceTab].img} 
-                alt={serviceDetails[activeServiceTab].title} 
-                width="600" 
-                height="402"
-                style={{ 
-                  width: '100%', 
-                  height: '100%', 
-                  objectFit: 'cover',
-                  display: 'block'
-                }} 
-              />
+              <picture>
+                <source srcSet={serviceDetails[activeServiceTab].imgAvif} type="image/avif" />
+                <source srcSet={serviceDetails[activeServiceTab].imgWebp} type="image/webp" />
+                <img 
+                  src={serviceDetails[activeServiceTab].img} 
+                  alt={serviceDetails[activeServiceTab].title} 
+                  width="600" 
+                  height="402"
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    display: 'block'
+                  }} 
+                />
+              </picture>
               <div style={{
                 position: 'absolute',
                 top: 0,
