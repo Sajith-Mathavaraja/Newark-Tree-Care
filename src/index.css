@@ -2,8 +2,6 @@
    Newark Tree Care - Clean Light Header & Navigation Design System
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-
 :root {
   /* Teal-Green Glassmorphic Theme Palette */
   --clr-bg-root: #0a352e; /* Solid deep teal-green theme */
@@ -33,8 +31,8 @@
   --clr-border: rgba(100, 210, 195, 0.18);
   --clr-border-green: rgba(93, 232, 200, 0.28);
 
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
   --radius-sm: 10px;
   --radius-md: 20px;

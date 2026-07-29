@@ -293,7 +293,7 @@ export default function App() {
       <header className={`header-light ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-bar">
           <a href="#home" className="brand">
-            <img src="/assets/logo.jpg" alt="Newark Tree Care Logo" />
+            <img src="/assets/logo.jpg" alt="Newark Tree Care Logo" width="42" height="42" />
             <div>
               <div className="brand-text-name">Newark Tree Care</div>
               <div className="brand-text-sub">Expert Tree Solutions</div>
@@ -387,11 +387,11 @@ export default function App() {
 
           <div className="hero-composition-wrapper">
             <div className="hero-main-frame">
-              <img src="/assets/hero_arborist.jpg" alt="Professional Arborist at work in Newark" />
+              <img src="/assets/hero_arborist.jpg" alt="Professional Arborist at work in Newark" width="1376" height="768" />
             </div>
             
             <div className="hero-secondary-card">
-              <img src="/assets/estate.jpg" alt="Beautiful Estate Tree Care" />
+              <img src="/assets/estate.jpg" alt="Beautiful Estate Tree Care" width="1376" height="768" />
               <div className="hero-secondary-badge">
                 <span>✓ Property Care Excellence</span>
               </div>
@@ -439,7 +439,7 @@ export default function App() {
               <div className="overview-asymmetric-photo">
                 <div className="photo-backing-card"></div>
                 <div className="photo-front-frame">
-                  <img src="/assets/tree_services.jpg" alt="Our arborist crew operating tree chipping equipment safely" />
+                  <img src="/assets/tree_services.jpg" alt="Our arborist crew operating tree chipping equipment safely" width="1200" height="896" />
                 </div>
               </div>
               
@@ -563,6 +563,8 @@ export default function App() {
               <img 
                 src={serviceDetails[activeServiceTab].img} 
                 alt={serviceDetails[activeServiceTab].title} 
+                width="1264" 
+                height="848"
                 style={{ 
                   width: '100%', 
                   height: '100%', 
@@ -877,7 +879,7 @@ export default function App() {
           <div className="footer-grid-4">
             <div>
               <a href="#home" className="brand" style={{ marginBottom: '1.25rem' }}>
-                <img src="/assets/logo.jpg" alt="Newark Tree Care Logo" />
+                <img src="/assets/logo.jpg" alt="Newark Tree Care Logo" width="42" height="42" />
                 <div>
                   <div className="brand-text-name" style={{ color: '#ffffff' }}>Newark Tree Care</div>
                   <div className="brand-text-sub" style={{ color: '#2dd4bf' }}>Expert Tree Solutions</div>
