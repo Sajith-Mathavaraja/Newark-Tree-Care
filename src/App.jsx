@@ -45,6 +45,10 @@ export default function App() {
   // Legal Modal State ('terms' | 'privacy' | null)
   const [activeLegalModal, setActiveLegalModal] = useState(null);
 
+  // Lazy loading states for third-party iframe & script to avoid blocking main thread
+  const contactRef = React.useRef(null);
+  const [contactVisible, setContactVisible] = useState(false);
+
   // Scroll & Scroll Spy effect
   useEffect(() => {
     const handleScroll = () => {
@@ -68,16 +72,28 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Dynamic loader for external form embed scripts (delayed to avoid blocking initial render)
+  // Dynamic IntersectionObserver to load form scripts & iframe only when scrolled near contact
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const script = document.createElement('script');
-      script.src = 'https://link.kdlead.com/js/form_embed.js';
-      script.async = true;
-      document.body.appendChild(script);
-    }, 2500);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setContactVisible(true);
+          const script = document.createElement('script');
+          script.src = 'https://link.kdlead.com/js/form_embed.js';
+          script.async = true;
+          document.body.appendChild(script);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' }
+    );
+
+    if (contactRef.current) {
+      observer.observe(contactRef.current);
+    }
+
     return () => {
-      clearTimeout(timer);
+      observer.disconnect();
       const existingScript = document.querySelector('script[src="https://link.kdlead.com/js/form_embed.js"]');
       if (existingScript) {
         existingScript.remove();
@@ -851,25 +867,29 @@ export default function App() {
               </a>
             </div>
 
-            <div className="contact-form-card" style={{ padding: '0.75rem' }}>
-              <iframe
-                src="https://link.kdlead.com/widget/form/8UDU6zVGceOYljhIyUvu"
-                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
-                id="inline-8UDU6zVGceOYljhIyUvu" 
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Newark Tree Care"
-                data-height="1180"
-                data-layout-iframe-id="inline-8UDU6zVGceOYljhIyUvu"
-                data-form-id="8UDU6zVGceOYljhIyUvu"
-                title="Newark Tree Care"
-                loading="lazy"
-              />
+            <div ref={contactRef} className="contact-form-card" style={{ padding: '0.75rem', minHeight: '580px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {contactVisible ? (
+                <iframe
+                  src="https://link.kdlead.com/widget/form/8UDU6zVGceOYljhIyUvu"
+                  style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
+                  id="inline-8UDU6zVGceOYljhIyUvu" 
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="Newark Tree Care"
+                  data-height="1180"
+                  data-layout-iframe-id="inline-8UDU6zVGceOYljhIyUvu"
+                  data-form-id="8UDU6zVGceOYljhIyUvu"
+                  title="Newark Tree Care"
+                  loading="lazy"
+                />
+              ) : (
+                <div style={{ color: 'rgba(255, 255, 255, 0.4)', fontSize: '0.95rem' }}>Loading secure form...</div>
+              )}
             </div>
           </div>
         </div>
