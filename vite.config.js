@@ -7,11 +7,26 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      injectRegister: 'script-defer',
       base: '/Newark-Tree-Care/',
       scope: '/Newark-Tree-Care/',
       workbox: {
         // Cache all static assets (images, JS, CSS) for 30 days
         runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/res\.cloudinary\.com\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'cloudinary-images-v1',
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
           {
             urlPattern: /\/Newark-Tree-Care\/assets\/.+\.(jpg|jpeg|webp|avif|png|gif|svg)(\?.*)?$/i,
             handler: 'CacheFirst',

@@ -457,7 +457,7 @@ export default function App() {
       <div id="about" className="about-page-wrapper">
         
         {/* SUB-SECTION 1: HERO */}
-        <div className="about-hero" style={{ backgroundImage: "image-set(url('assets/estate.avif') type('image/avif'), url('assets/estate.webp') type('image/webp'), url('assets/estate.jpg') type('image/jpeg'))" }}>
+        <div className="about-hero" style={{ backgroundImage: "image-set(url('assets/estate.avif?v=1') type('image/avif'), url('assets/estate.webp?v=1') type('image/webp'), url('assets/estate.jpg?v=3') type('image/jpeg'))" }}>
           <div className="about-hero-overlay"></div>
           <div className="about-hero-content container">
             <h1 className="about-hero-title">Growing Strong Trees.<br/>Building Lasting Trust.</h1>
