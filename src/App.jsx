@@ -68,14 +68,20 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Dynamic loader for external form embed scripts
+  // Dynamic loader for external form embed scripts (delayed to avoid blocking initial render)
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://link.kdlead.com/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
+    const timer = setTimeout(() => {
+      const script = document.createElement('script');
+      script.src = 'https://link.kdlead.com/js/form_embed.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }, 2500);
     return () => {
-      document.body.removeChild(script);
+      clearTimeout(timer);
+      const existingScript = document.querySelector('script[src="https://link.kdlead.com/js/form_embed.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
     };
   }, []);
 
@@ -861,6 +867,7 @@ export default function App() {
                 data-layout-iframe-id="inline-8UDU6zVGceOYljhIyUvu"
                 data-form-id="8UDU6zVGceOYljhIyUvu"
                 title="Newark Tree Care"
+                loading="lazy"
               />
             </div>
           </div>
