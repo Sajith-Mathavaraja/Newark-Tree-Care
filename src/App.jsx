@@ -240,9 +240,9 @@ export default function App() {
       title: "Precision Tree Pruning & Trimming",
       desc: "Proper pruning helps trees grow stronger while improving their overall appearance and safety. Our crew uses ISA canopy techniques to shape your trees beautifully.",
       icon: "pruning",
-      img: "assets/service_pruning.jpg?v=5",
-      imgWebp: "assets/service_pruning.webp?v=1",
-      imgAvif: "assets/service_pruning.avif?v=1",
+      img: "assets/service_pruning.jpg?v=6",
+      imgWebp: "assets/service_pruning.webp?v=2",
+      imgAvif: "assets/service_pruning.avif?v=2",
       points: [
         "Crown thinning for improved air & light flow",
         "Deadwooding and safety clearing of heavy branches",
@@ -441,9 +441,9 @@ export default function App() {
             
             <div className="hero-secondary-card">
               <picture>
-                <source srcSet="assets/estate.avif?v=1" type="image/avif" />
-                <source srcSet="assets/estate.webp?v=1" type="image/webp" />
-                <img src="assets/estate.jpg?v=3" alt="Beautiful Estate Tree Care" width="800" height="446" />
+                <source srcSet="assets/estate.avif?v=2" type="image/avif" />
+                <source srcSet="assets/estate.webp?v=2" type="image/webp" />
+                <img src="assets/estate.jpg?v=4" alt="Beautiful Estate Tree Care" width="800" height="446" />
               </picture>
               <div className="hero-secondary-badge">
                 <span>✓ Property Care Excellence</span>
@@ -457,7 +457,7 @@ export default function App() {
       <div id="about" className="about-page-wrapper">
         
         {/* SUB-SECTION 1: HERO */}
-        <div className="about-hero" style={{ backgroundImage: "image-set(url('assets/estate.avif?v=1') type('image/avif'), url('assets/estate.webp?v=1') type('image/webp'), url('assets/estate.jpg?v=3') type('image/jpeg'))" }}>
+        <div className="about-hero" style={{ backgroundImage: "image-set(url('assets/estate.avif?v=2') type('image/avif'), url('assets/estate.webp?v=2') type('image/webp'), url('assets/estate.jpg?v=4') type('image/jpeg'))" }}>
           <div className="about-hero-overlay"></div>
           <div className="about-hero-content container">
             <h1 className="about-hero-title">Growing Strong Trees.<br/>Building Lasting Trust.</h1>
