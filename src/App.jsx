@@ -904,7 +904,7 @@ export default function App() {
                   loading="lazy"
                 />
               ) : (
-                <div style={{ color: 'rgba(255, 255, 255, 0.4)', fontSize: '0.95rem' }}>Loading secure form...</div>
+                <div style={{ color: '#ffffff', fontSize: '0.95rem', fontWeight: 600 }}>Loading secure form...</div>
               )}
             </div>
           </div>
