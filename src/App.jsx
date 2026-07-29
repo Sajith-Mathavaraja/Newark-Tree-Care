@@ -226,7 +226,7 @@ export default function App() {
       title: "Tree Assessment & Consultation",
       desc: "Every tree has different needs. Our certified arborist evaluates tree health, structural integrity, soil quality, and potential risks to provide tailored care recommendations.",
       icon: "assessment",
-      img: "assets/service_assessment.jpg",
+      img: "assets/service_assessment.jpg?v=3",
       points: [
         "Evaluation of structural hazards and disease",
         "Soil condition and root flare inspections",
@@ -238,7 +238,7 @@ export default function App() {
       title: "Precision Tree Pruning & Trimming",
       desc: "Proper pruning helps trees grow stronger while improving their overall appearance and safety. Our crew uses ISA canopy techniques to shape your trees beautifully.",
       icon: "pruning",
-      img: "assets/service_pruning.jpg",
+      img: "assets/service_pruning.jpg?v=3",
       points: [
         "Crown thinning for improved air & light flow",
         "Deadwooding and safety clearing of heavy branches",
@@ -250,7 +250,7 @@ export default function App() {
       title: "Safe Tree Removal & Felling",
       desc: "When a tree becomes dangerous, diseased, or unwanted, professional removal is the best path. We employ top rigging safety systems to fell trees with minimal landscape impact.",
       icon: "removal",
-      img: "assets/service_removal.jpg",
+      img: "assets/service_removal.jpg?v=3",
       points: [
         "Hazardous and leaning tree removal",
         "Storm-damaged structure extraction",
@@ -262,7 +262,7 @@ export default function App() {
       title: "Stump & Root Management",
       desc: "Old stumps can invite pests and ruin lawn layouts. We use high-powered hydraulic grinders to pulverize stumps below grade, leaving space ready for planting.",
       icon: "stump",
-      img: "assets/service_stump.jpg",
+      img: "assets/service_stump.jpg?v=3",
       points: [
         "Deep root grinding down to 12 inches below soil",
         "Yard and root zone preparation for replanting",
@@ -274,7 +274,7 @@ export default function App() {
       title: "Emergency Tree Response",
       desc: "Unexpected tree failures require immediate, skilled intervention. Our emergency crew is ready to secure your roofline, vehicles, and driveways as soon as possible.",
       icon: "emergency",
-      img: "assets/service_emergency.jpg",
+      img: "assets/service_emergency.jpg?v=3",
       points: [
         "Immediate hazard stabilization",
         "Storm cleanup and damage control",
@@ -331,7 +331,7 @@ export default function App() {
       <header className={`header-light ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-bar">
           <a href="#home" className="brand">
-            <img src="assets/logo.jpg" alt="Newark Tree Care Logo" width="42" height="42" />
+            <img src="assets/logo.jpg?v=3" alt="Newark Tree Care Logo" width="42" height="42" />
             <div>
               <div className="brand-text-name">Newark Tree Care</div>
               <div className="brand-text-sub">Expert Tree Solutions</div>
@@ -426,11 +426,11 @@ export default function App() {
 
            <div className="hero-composition-wrapper">
             <div className="hero-main-frame">
-              <img src="assets/hero_arborist.jpg" alt="Professional Arborist at work in Newark" width="800" height="446" />
+              <img src="assets/hero_arborist.jpg?v=3" alt="Professional Arborist at work in Newark" width="800" height="446" />
             </div>
             
             <div className="hero-secondary-card">
-              <img src="assets/estate.jpg" alt="Beautiful Estate Tree Care" width="800" height="446" />
+              <img src="assets/estate.jpg?v=3" alt="Beautiful Estate Tree Care" width="800" height="446" />
               <div className="hero-secondary-badge">
                 <span>✓ Property Care Excellence</span>
               </div>
@@ -478,7 +478,7 @@ export default function App() {
               <div className="overview-asymmetric-photo">
                 <div className="photo-backing-card"></div>
                 <div className="photo-front-frame">
-                  <img src="assets/tree_services.jpg" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" />
+                  <img src="assets/tree_services.jpg?v=3" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" />
                 </div>
               </div>
               
@@ -918,7 +918,7 @@ export default function App() {
           <div className="footer-grid-4">
             <div>
               <a href="#home" className="brand" style={{ marginBottom: '1.25rem' }}>
-                <img src="assets/logo.jpg" alt="Newark Tree Care Logo" width="42" height="42" />
+                <img src="assets/logo.jpg?v=3" alt="Newark Tree Care Logo" width="42" height="42" />
                 <div>
                   <div className="brand-text-name" style={{ color: '#ffffff' }}>Newark Tree Care</div>
                   <div className="brand-text-sub" style={{ color: '#2dd4bf' }}>Expert Tree Solutions</div>
