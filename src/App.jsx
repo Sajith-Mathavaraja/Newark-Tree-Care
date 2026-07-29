@@ -436,11 +436,7 @@ export default function App() {
 
            <div className="hero-composition-wrapper">
             <div className="hero-main-frame">
-              <picture>
-                <source srcSet="assets/hero_arborist.avif?v=1" type="image/avif" />
-                <source srcSet="assets/hero_arborist.webp?v=1" type="image/webp" />
-                <img src="assets/hero_arborist.jpg?v=3" alt="Professional Arborist at work in Newark" width="800" height="446" fetchpriority="high" />
-              </picture>
+              <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto,w_800/hero_arborist_q6wspn" alt="Professional Arborist at work in Newark" width="800" height="446" fetchpriority="high" />
             </div>
             
             <div className="hero-secondary-card">
