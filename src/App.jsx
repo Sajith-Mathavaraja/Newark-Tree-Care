@@ -226,9 +226,9 @@ export default function App() {
       title: "Tree Assessment & Consultation",
       desc: "Every tree has different needs. Our certified arborist evaluates tree health, structural integrity, soil quality, and potential risks to provide tailored care recommendations.",
       icon: "assessment",
-      img: "assets/service_assessment.jpg?v=5",
-      imgWebp: "assets/service_assessment.webp?v=1",
-      imgAvif: "assets/service_assessment.avif?v=1",
+      img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto,w_600/service_assessment_jh70qw",
+      imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto,w_600/service_assessment_jh70qw",
+      imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto,w_600/service_assessment_jh70qw",
       points: [
         "Evaluation of structural hazards and disease",
         "Soil condition and root flare inspections",
