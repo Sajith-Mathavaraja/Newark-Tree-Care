@@ -239,9 +239,9 @@ export default function App() {
       title: "Tree Assessment & Consultation",
       desc: "Every tree has different needs. Our certified arborist evaluates tree health, structural integrity, soil quality, and potential risks to provide tailored care recommendations.",
       icon: "assessment",
-      img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_auto:eco,w_600/service_assessment_jh70qw",
-      imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_auto:eco,w_600/service_assessment_jh70qw",
-      imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_auto:eco,w_600/service_assessment_jh70qw",
+      img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_600/service_assessment_jh70qw",
+      imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_600/service_assessment_jh70qw",
+      imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_600/service_assessment_jh70qw",
       points: [
         "Evaluation of structural hazards and disease",
         "Soil condition and root flare inspections",
@@ -267,9 +267,9 @@ export default function App() {
       title: "Safe Tree Removal & Felling",
       desc: "When a tree becomes dangerous, diseased, or unwanted, professional removal is the best path. We employ top rigging safety systems to fell trees with minimal landscape impact.",
       icon: "removal",
-      img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_auto:eco,w_600/service_removal_gezia2",
-      imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_auto:eco,w_600/service_removal_gezia2",
-      imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_auto:eco,w_600/service_removal_gezia2",
+      img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_600/service_removal_gezia2",
+      imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_600/service_removal_gezia2",
+      imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_600/service_removal_gezia2",
       points: [
         "Hazardous and leaning tree removal",
         "Storm-damaged structure extraction",
@@ -281,9 +281,9 @@ export default function App() {
       title: "Stump & Root Management",
       desc: "Old stumps can invite pests and ruin lawn layouts. We use high-powered hydraulic grinders to pulverize stumps below grade, leaving space ready for planting.",
       icon: "stump",
-      img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_auto:eco,w_600/service_stump_tzemwh",
-      imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_auto:eco,w_600/service_stump_tzemwh",
-      imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_auto:eco,w_600/service_stump_tzemwh",
+      img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_600/service_stump_tzemwh",
+      imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_600/service_stump_tzemwh",
+      imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_600/service_stump_tzemwh",
       points: [
         "Deep root grinding down to 12 inches below soil",
         "Yard and root zone preparation for replanting",
@@ -449,7 +449,7 @@ export default function App() {
 
            <div className="hero-composition-wrapper">
             <div className="hero-main-frame">
-              <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_auto:eco,w_450/hero_arborist_q6wspn" alt="Professional Arborist at work in Newark" width="800" height="446" fetchpriority="high" />
+              <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_450/hero_arborist_q6wspn" alt="Professional Arborist at work in Newark" width="800" height="446" fetchpriority="high" />
             </div>
             
             <div className="hero-secondary-card">
@@ -501,7 +501,7 @@ export default function App() {
               <div className="overview-asymmetric-photo">
                 <div className="photo-backing-card"></div>
                 <div className="photo-front-frame">
-                  <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_auto:eco,w_400/tree_services_zu0ne8" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" />
+                  <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_400/tree_services_zu0ne8" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" />
                 </div>
               </div>
               
