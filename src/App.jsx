@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { estateAvif, pruningAvif } from './embeddedImages';
 import { 
   Phone, ShieldCheck, MapPin, CheckCircle2, ArrowRight, Star, 
   AlertTriangle, Trees, Check, Shield, Users, Wrench, Building, Home,
@@ -240,9 +241,9 @@ export default function App() {
       title: "Precision Tree Pruning & Trimming",
       desc: "Proper pruning helps trees grow stronger while improving their overall appearance and safety. Our crew uses ISA canopy techniques to shape your trees beautifully.",
       icon: "pruning",
-      img: "assets/service_pruning.jpg?v=6",
-      imgWebp: "assets/service_pruning.webp?v=2",
-      imgAvif: "assets/service_pruning.avif?v=2",
+      img: pruningAvif,
+      imgWebp: pruningAvif,
+      imgAvif: pruningAvif,
       points: [
         "Crown thinning for improved air & light flow",
         "Deadwooding and safety clearing of heavy branches",
@@ -440,11 +441,7 @@ export default function App() {
             </div>
             
             <div className="hero-secondary-card">
-              <picture>
-                <source srcSet="assets/estate.avif?v=2" type="image/avif" />
-                <source srcSet="assets/estate.webp?v=2" type="image/webp" />
-                <img src="assets/estate.jpg?v=4" alt="Beautiful Estate Tree Care" width="800" height="446" />
-              </picture>
+              <img src={estateAvif} alt="Beautiful Estate Tree Care" width="800" height="446" />
               <div className="hero-secondary-badge">
                 <span>✓ Property Care Excellence</span>
               </div>
@@ -457,7 +454,7 @@ export default function App() {
       <div id="about" className="about-page-wrapper">
         
         {/* SUB-SECTION 1: HERO */}
-        <div className="about-hero" style={{ backgroundImage: "image-set(url('assets/estate.avif?v=2') type('image/avif'), url('assets/estate.webp?v=2') type('image/webp'), url('assets/estate.jpg?v=4') type('image/jpeg'))" }}>
+        <div className="about-hero" style={{ backgroundImage: `url(${estateAvif})` }}>
           <div className="about-hero-overlay"></div>
           <div className="about-hero-content container">
             <h1 className="about-hero-title">Growing Strong Trees.<br/>Building Lasting Trust.</h1>
