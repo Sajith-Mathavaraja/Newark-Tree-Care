@@ -5,7 +5,7 @@ import {
   AlertTriangle, Trees, Check, Shield, Users, Wrench, Building, Home,
   Sparkles, Calendar, Clock, Award, ChevronDown, ChevronRight, MessageSquare,
   ArrowLeft, Info, HelpCircle, Mail, X, FileText, Lock
-} from 'lucide-react';
+} from './Icons';
 
 export default function App() {
   // Mobile Nav & Scroll
