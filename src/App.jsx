@@ -226,7 +226,7 @@ export default function App() {
       title: "Tree Assessment & Consultation",
       desc: "Every tree has different needs. Our certified arborist evaluates tree health, structural integrity, soil quality, and potential risks to provide tailored care recommendations.",
       icon: "assessment",
-      img: "assets/service_assessment.jpg?v=3",
+      img: "assets/service_assessment.jpg?v=4",
       points: [
         "Evaluation of structural hazards and disease",
         "Soil condition and root flare inspections",
@@ -238,7 +238,7 @@ export default function App() {
       title: "Precision Tree Pruning & Trimming",
       desc: "Proper pruning helps trees grow stronger while improving their overall appearance and safety. Our crew uses ISA canopy techniques to shape your trees beautifully.",
       icon: "pruning",
-      img: "assets/service_pruning.jpg?v=3",
+      img: "assets/service_pruning.jpg?v=4",
       points: [
         "Crown thinning for improved air & light flow",
         "Deadwooding and safety clearing of heavy branches",
@@ -250,7 +250,7 @@ export default function App() {
       title: "Safe Tree Removal & Felling",
       desc: "When a tree becomes dangerous, diseased, or unwanted, professional removal is the best path. We employ top rigging safety systems to fell trees with minimal landscape impact.",
       icon: "removal",
-      img: "assets/service_removal.jpg?v=3",
+      img: "assets/service_removal.jpg?v=4",
       points: [
         "Hazardous and leaning tree removal",
         "Storm-damaged structure extraction",
@@ -262,7 +262,7 @@ export default function App() {
       title: "Stump & Root Management",
       desc: "Old stumps can invite pests and ruin lawn layouts. We use high-powered hydraulic grinders to pulverize stumps below grade, leaving space ready for planting.",
       icon: "stump",
-      img: "assets/service_stump.jpg?v=3",
+      img: "assets/service_stump.jpg?v=4",
       points: [
         "Deep root grinding down to 12 inches below soil",
         "Yard and root zone preparation for replanting",
@@ -274,7 +274,7 @@ export default function App() {
       title: "Emergency Tree Response",
       desc: "Unexpected tree failures require immediate, skilled intervention. Our emergency crew is ready to secure your roofline, vehicles, and driveways as soon as possible.",
       icon: "emergency",
-      img: "assets/service_emergency.jpg?v=3",
+      img: "assets/service_emergency.jpg?v=4",
       points: [
         "Immediate hazard stabilization",
         "Storm cleanup and damage control",
