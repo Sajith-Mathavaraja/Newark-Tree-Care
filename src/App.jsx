@@ -424,13 +424,13 @@ export default function App() {
             </div>
           </div>
 
-          <div className="hero-composition-wrapper">
+           <div className="hero-composition-wrapper">
             <div className="hero-main-frame">
-              <img src="assets/hero_arborist.jpg" alt="Professional Arborist at work in Newark" width="1376" height="768" />
+              <img src="assets/hero_arborist.jpg" alt="Professional Arborist at work in Newark" width="800" height="446" />
             </div>
             
             <div className="hero-secondary-card">
-              <img src="assets/estate.jpg" alt="Beautiful Estate Tree Care" width="1376" height="768" />
+              <img src="assets/estate.jpg" alt="Beautiful Estate Tree Care" width="800" height="446" />
               <div className="hero-secondary-badge">
                 <span>✓ Property Care Excellence</span>
               </div>
@@ -478,7 +478,7 @@ export default function App() {
               <div className="overview-asymmetric-photo">
                 <div className="photo-backing-card"></div>
                 <div className="photo-front-frame">
-                  <img src="assets/tree_services.jpg" alt="Our arborist crew operating tree chipping equipment safely" width="1200" height="896" />
+                  <img src="assets/tree_services.jpg" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" />
                 </div>
               </div>
               
@@ -602,8 +602,8 @@ export default function App() {
               <img 
                 src={serviceDetails[activeServiceTab].img} 
                 alt={serviceDetails[activeServiceTab].title} 
-                width="1264" 
-                height="848"
+                width="600" 
+                height="402"
                 style={{ 
                   width: '100%', 
                   height: '100%', 
