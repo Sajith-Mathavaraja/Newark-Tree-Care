@@ -436,7 +436,7 @@ export default function App() {
 
            <div className="hero-composition-wrapper">
             <div className="hero-main-frame">
-              <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto:eco,w_800/hero_arborist_q6wspn" srcSet="https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto:eco,w_400/hero_arborist_q6wspn 400w, https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto:eco,w_800/hero_arborist_q6wspn 800w" sizes="(max-width: 600px) 400px, 800px" alt="Professional Arborist at work in Newark" width="800" height="446" fetchpriority="high" />
+              <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto:eco,w_450/hero_arborist_q6wspn" alt="Professional Arborist at work in Newark" width="800" height="446" fetchpriority="high" />
             </div>
             
             <div className="hero-secondary-card">
@@ -492,7 +492,7 @@ export default function App() {
               <div className="overview-asymmetric-photo">
                 <div className="photo-backing-card"></div>
                 <div className="photo-front-frame">
-                  <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto:eco,w_600/tree_services_zu0ne8" srcSet="https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto:eco,w_350/tree_services_zu0ne8 350w, https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto:eco,w_600/tree_services_zu0ne8 600w" sizes="(max-width: 600px) 350px, 600px" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" />
+                  <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto:eco,w_400/tree_services_zu0ne8" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" />
                 </div>
               </div>
               
