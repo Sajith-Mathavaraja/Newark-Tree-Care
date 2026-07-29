@@ -341,7 +341,7 @@ export default function App() {
       <header className={`header-light ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-bar">
           <a href="#home" className="brand">
-            <img src="assets/logo.jpg?v=3" alt="Newark Tree Care Logo" width="42" height="42" />
+            <img src="assets/logo.webp?v=1" alt="Newark Tree Care Logo" width="42" height="42" />
             <div>
               <div className="brand-text-name">Newark Tree Care</div>
               <div className="brand-text-sub">Expert Tree Solutions</div>
@@ -936,7 +936,7 @@ export default function App() {
           <div className="footer-grid-4">
             <div>
               <a href="#home" className="brand" style={{ marginBottom: '1.25rem' }}>
-                <img src="assets/logo.jpg?v=3" alt="Newark Tree Care Logo" width="42" height="42" />
+                <img src="assets/logo.webp?v=1" alt="Newark Tree Care Logo" width="42" height="42" />
                 <div>
                   <div className="brand-text-name" style={{ color: '#ffffff' }}>Newark Tree Care</div>
                   <div className="brand-text-sub" style={{ color: '#2dd4bf' }}>Expert Tree Solutions</div>
