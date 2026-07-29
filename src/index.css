@@ -2005,60 +2005,42 @@ h1, h2, h3, h4, h5, h6 {
   animation: morphBlobThree 22s infinite alternate ease-in-out;
 }
 
-/* Liquid Blob Morphing Keyframes (Apple/Stripe Style) */
+/* Liquid Blob Morphing Keyframes (Apple/Stripe Style) - Composited transform-only animation */
 @keyframes morphBlobOne {
   0% {
-    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
   33% {
-    border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
     transform: translate(80px, 60px) scale(1.12) rotate(120deg);
   }
   66% {
-    border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%;
     transform: translate(-40px, 110px) scale(0.92) rotate(240deg);
   }
   100% {
-    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
     transform: translate(0, 0) scale(1) rotate(360deg);
   }
 }
 
 @keyframes morphBlobTwo {
   0% {
-    border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%;
     transform: translate(0, 0) scale(1.08) rotate(0deg);
   }
   50% {
-    border-radius: 35% 65% 45% 55% / 45% 35% 65% 55%;
     transform: translate(-70px, -60px) scale(0.88) rotate(-180deg);
   }
   100% {
-    border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%;
     transform: translate(0, 0) scale(1.08) rotate(-360deg);
   }
 }
 
 @keyframes morphBlobThree {
   0% {
-    border-radius: 35% 65% 65% 35% / 35% 35% 65% 65%;
     transform: translate(0, 0) scale(0.96) rotate(0deg);
   }
   50% {
-    border-radius: 55% 45% 45% 55% / 50% 50% 50% 50%;
-    transform: translate(60px, -80px) scale(1.16) rotate(180deg);
-  }
-  0% {
-    border-radius: 35% 65% 65% 35% / 35% 35% 65% 65%;
-    transform: translate(0, 0) scale(0.96) rotate(0deg);
-  }
-  50% {
-    border-radius: 55% 45% 45% 55% / 50% 50% 50% 50%;
     transform: translate(60px, -80px) scale(1.16) rotate(180deg);
   }
   100% {
-    border-radius: 35% 65% 65% 35% / 35% 35% 65% 65%;
     transform: translate(0, 0) scale(0.96) rotate(360deg);
   }
 }
