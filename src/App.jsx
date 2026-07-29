@@ -268,9 +268,9 @@ export default function App() {
       title: "Stump & Root Management",
       desc: "Old stumps can invite pests and ruin lawn layouts. We use high-powered hydraulic grinders to pulverize stumps below grade, leaving space ready for planting.",
       icon: "stump",
-      img: "assets/service_stump.jpg?v=5",
-      imgWebp: "assets/service_stump.webp?v=1",
-      imgAvif: "assets/service_stump.avif?v=1",
+      img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto,w_600/service_stump_tzemwh",
+      imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto,w_600/service_stump_tzemwh",
+      imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto,w_600/service_stump_tzemwh",
       points: [
         "Deep root grinding down to 12 inches below soil",
         "Yard and root zone preparation for replanting",
