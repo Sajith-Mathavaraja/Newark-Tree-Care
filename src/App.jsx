@@ -492,11 +492,7 @@ export default function App() {
               <div className="overview-asymmetric-photo">
                 <div className="photo-backing-card"></div>
                 <div className="photo-front-frame">
-                  <picture>
-                    <source srcSet="assets/tree_services.avif?v=1" type="image/avif" />
-                    <source srcSet="assets/tree_services.webp?v=1" type="image/webp" />
-                    <img src="assets/tree_services.jpg?v=3" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" />
-                  </picture>
+                  <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto,w_600/tree_services_zu0ne8" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" />
                 </div>
               </div>
               
