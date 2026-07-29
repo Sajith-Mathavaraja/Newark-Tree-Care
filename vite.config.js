@@ -10,7 +10,7 @@ export default defineConfig({
     cssInjectedByJs(),
     VitePWA({
       registerType: 'autoUpdate',
-      injectRegister: 'script-defer',
+      injectRegister: null,
       base: '/Newark-Tree-Care/',
       scope: '/Newark-Tree-Care/',
       workbox: {
