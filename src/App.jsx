@@ -254,9 +254,9 @@ export default function App() {
       title: "Safe Tree Removal & Felling",
       desc: "When a tree becomes dangerous, diseased, or unwanted, professional removal is the best path. We employ top rigging safety systems to fell trees with minimal landscape impact.",
       icon: "removal",
-      img: "assets/service_removal.jpg?v=5",
-      imgWebp: "assets/service_removal.webp?v=1",
-      imgAvif: "assets/service_removal.avif?v=1",
+      img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto,w_600/service_removal_gezia2",
+      imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto,w_600/service_removal_gezia2",
+      imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_auto,w_600/service_removal_gezia2",
       points: [
         "Hazardous and leaning tree removal",
         "Storm-damaged structure extraction",
