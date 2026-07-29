@@ -356,8 +356,9 @@ export default function App() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="hero-light" id="home">
+      <main>
+        {/* Hero Section */}
+        <section className="hero-light" id="home">
         <div className="container hero-grid-2col">
           <div className="hero-content-box">
             <h1>
@@ -590,9 +591,9 @@ export default function App() {
             </div>
 
             <div className="service-checklist-card">
-              <h4 style={{ color: '#ffffff', fontSize: '1.15rem', marginBottom: '1.25rem', borderBottom: '1px solid rgba(149, 213, 178, 0.15)', paddingBottom: '0.75rem' }}>
+              <h3 style={{ color: '#ffffff', fontSize: '1.15rem', marginBottom: '1.25rem', borderBottom: '1px solid rgba(149, 213, 178, 0.15)', paddingBottom: '0.75rem' }}>
                 Arborist Checklist
-              </h4>
+              </h3>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {serviceDetails[activeServiceTab].points.map((pt, idx) => (
                   <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', fontSize: '0.95rem', fontWeight: 600, color: '#d8e2dc' }}>
@@ -694,7 +695,7 @@ export default function App() {
             
             <div className="why-premium-card glass-card">
               <div className="why-card-top">
-                <span className="why-card-num">01</span>
+                <span className="why-card-num" data-num="01" aria-hidden="true"></span>
                 <div className="why-card-icon-wrapper">
                   <Award size={28} color="#5de8c8" />
                 </div>
@@ -705,7 +706,7 @@ export default function App() {
 
             <div className="why-premium-card glass-card">
               <div className="why-card-top">
-                <span className="why-card-num">02</span>
+                <span className="why-card-num" data-num="02" aria-hidden="true"></span>
                 <div className="why-card-icon-wrapper">
                   <Wrench size={28} color="#5de8c8" />
                 </div>
@@ -716,7 +717,7 @@ export default function App() {
 
             <div className="why-premium-card glass-card">
               <div className="why-card-top">
-                <span className="why-card-num">03</span>
+                <span className="why-card-num" data-num="03" aria-hidden="true"></span>
                 <div className="why-card-icon-wrapper">
                   <Home size={28} color="#5de8c8" />
                 </div>
@@ -727,7 +728,7 @@ export default function App() {
 
             <div className="why-premium-card glass-card">
               <div className="why-card-top">
-                <span className="why-card-num">04</span>
+                <span className="why-card-num" data-num="04" aria-hidden="true"></span>
                 <div className="why-card-icon-wrapper">
                   <Sparkles size={28} color="#5de8c8" />
                 </div>
@@ -759,7 +760,7 @@ export default function App() {
               "{testimonials[testimonialIndex].text}"
             </p>
 
-            <h4 style={{ fontSize: '1.15rem', color: '#ffffff', margin: '0 0 0.25rem 0' }}>{testimonials[testimonialIndex].name}</h4>
+            <h3 style={{ fontSize: '1.15rem', color: '#ffffff', margin: '0 0 0.25rem 0' }}>{testimonials[testimonialIndex].name}</h3>
             <span style={{ fontSize: '0.875rem', color: '#64d2c3', fontWeight: 600 }}>{testimonials[testimonialIndex].role}</span>
 
             {/* Navigation buttons */}
@@ -819,9 +820,9 @@ export default function App() {
         <div className="container">
           <div className="contact-box-light">
             <div>
-              <div style={{ display: 'inline-flex', padding: '0.4rem 1rem', borderRadius: '999px', background: 'rgba(5,150,105,0.1)', color: 'var(--clr-forest-700)', fontWeight: 700, fontSize: '0.85rem', marginBottom: '1.25rem' }}>
+              <span className="badge-pill" style={{ marginBottom: '1.25rem' }}>
                 Contact Section
-              </div>
+              </span>
               <h2>Ready to Take Care of Your Trees?</h2>
               <p className="contact-desc">
                 Whether you need expert advice, regular maintenance, or immediate tree assistance, our team is here to help.
@@ -873,12 +874,7 @@ export default function App() {
           </div>
         </div>
       </section>
-
-
-
-
-
-
+    </main>
 
       {/* Footer */}
       <footer className="footer-light">
@@ -898,7 +894,7 @@ export default function App() {
             </div>
 
             <div>
-              <h4 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '1.5rem' }}>Quick Links</h4>
+              <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '1.5rem' }}>Quick Links</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
                 <a href="#home" style={{ color: '#d1fae5' }}>Home</a>
                 <a href="#about" style={{ color: '#d1fae5' }}>About Us</a>
@@ -909,7 +905,7 @@ export default function App() {
             </div>
 
             <div>
-              <h4 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '1.5rem' }}>Services</h4>
+              <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '1.5rem' }}>Services</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
                 <a href="#services" style={{ color: '#d1fae5' }}>Tree Pruning</a>
                 <a href="#services" style={{ color: '#d1fae5' }}>Tree Removal</a>
@@ -920,7 +916,7 @@ export default function App() {
             </div>
 
             <div>
-              <h4 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '1.5rem' }}>Contact Us</h4>
+              <h3 style={{ color: '#ffffff', fontSize: '1.2rem', marginBottom: '1.5rem' }}>Contact Us</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
                 <span style={{ color: '#ffffff' }}>Direct Hotline:</span>
                 <a href="tel:5105458733" style={{ fontWeight: 800, color: '#f59e0b', fontSize: '1.2rem' }}>510-545-8733</a>
