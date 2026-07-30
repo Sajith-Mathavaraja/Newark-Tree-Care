@@ -53,6 +53,22 @@ export default function App() {
   // Lazy loading states for third-party iframe & script to avoid blocking main thread
   const contactRef = React.useRef(null);
   const [contactVisible, setContactVisible] = useState(false);
+  const [loadBelowFold, setLoadBelowFold] = useState(false);
+
+  // Defer BelowFold JS chunk load until user interaction or idle timer
+  useEffect(() => {
+    const handleInteract = () => setLoadBelowFold(true);
+    window.addEventListener('scroll', handleInteract, { passive: true, once: true });
+    window.addEventListener('touchstart', handleInteract, { passive: true, once: true });
+    window.addEventListener('mousemove', handleInteract, { passive: true, once: true });
+    const timer = setTimeout(() => setLoadBelowFold(true), 2200);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleInteract);
+      window.removeEventListener('touchstart', handleInteract);
+      window.removeEventListener('mousemove', handleInteract);
+    };
+  }, []);
 
   // Scroll & Scroll Spy effect
   useEffect(() => {
@@ -466,40 +482,42 @@ export default function App() {
         </div>
       </section>
 
-      {/* All sections below the hero are lazily loaded in a separate JS chunk to reduce TBT */}
+      {/* All sections below the hero are lazily loaded in a separate JS chunk on idle/interaction */}
       </main>
-      <Suspense fallback={null}>
-        <BelowFold
-          estateAvif={estateAvif}
-          pruningAvif={pruningAvif}
-          activeServiceTab={activeServiceTab}
-          setActiveServiceTab={setActiveServiceTab}
-          selectedSymptom={selectedSymptom}
-          setSelectedSymptom={setSelectedSymptom}
-          testimonialIndex={testimonialIndex}
-          setTestimonialIndex={setTestimonialIndex}
-          activeFaq={activeFaq}
-          setActiveFaq={setActiveFaq}
-          contactName={contactName}
-          setContactName={setContactName}
-          contactPhone={contactPhone}
-          setContactPhone={setContactPhone}
-          contactService={contactService}
-          setContactService={setContactService}
-          contactMsg={contactMsg}
-          setContactMsg={setContactMsg}
-          contactRef={contactRef}
-          contactVisible={contactVisible}
-          activeLegalModal={activeLegalModal}
-          setActiveLegalModal={setActiveLegalModal}
-          serviceDetails={serviceDetails}
-          symptoms={symptoms}
-          testimonials={testimonials}
-          faqs={faqs}
-          getServiceIcon={getServiceIcon}
-          triggerToast={triggerToast}
-      />
-      </Suspense>
+      {loadBelowFold && (
+        <Suspense fallback={null}>
+          <BelowFold
+            estateAvif={estateAvif}
+            pruningAvif={pruningAvif}
+            activeServiceTab={activeServiceTab}
+            setActiveServiceTab={setActiveServiceTab}
+            selectedSymptom={selectedSymptom}
+            setSelectedSymptom={setSelectedSymptom}
+            testimonialIndex={testimonialIndex}
+            setTestimonialIndex={setTestimonialIndex}
+            activeFaq={activeFaq}
+            setActiveFaq={setActiveFaq}
+            contactName={contactName}
+            setContactName={setContactName}
+            contactPhone={contactPhone}
+            setContactPhone={setContactPhone}
+            contactService={contactService}
+            setContactService={setContactService}
+            contactMsg={contactMsg}
+            setContactMsg={setContactMsg}
+            contactRef={contactRef}
+            contactVisible={contactVisible}
+            activeLegalModal={activeLegalModal}
+            setActiveLegalModal={setActiveLegalModal}
+            serviceDetails={serviceDetails}
+            symptoms={symptoms}
+            testimonials={testimonials}
+            faqs={faqs}
+            getServiceIcon={getServiceIcon}
+            triggerToast={triggerToast}
+          />
+        </Suspense>
+      )}
     </div>
   );
 }
