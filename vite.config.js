@@ -4,6 +4,9 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 import cssInjectedByJs from 'vite-plugin-css-injected-by-js';
 
+const isNetlify = process.env.NETLIFY === 'true';
+const base = isNetlify ? '/' : '/Newark-Tree-Care/';
+
 export default defineConfig({
   plugins: [
     react(),
@@ -11,8 +14,8 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: null,
-      base: '/Newark-Tree-Care/',
-      scope: '/Newark-Tree-Care/',
+      base: base,
+      scope: base,
       workbox: {
         // Cache all static assets (images, JS, CSS) for long periods
         // Safe: Vite content-hashes all filenames so stale cache is never an issue
@@ -32,7 +35,7 @@ export default defineConfig({
             },
           },
           {
-            urlPattern: /\/Newark-Tree-Care\/assets\/.+\.(jpg|jpeg|webp|avif|png|gif|svg)(\?.*)?$/i,
+            urlPattern: /\/assets\/.+\.(jpg|jpeg|webp|avif|png|gif|svg)(\?.*)?$/i,
             handler: 'CacheFirst',
             options: {
               cacheName: 'images-cache-v1',
@@ -47,7 +50,7 @@ export default defineConfig({
           },
           {
             // JS and CSS bundles — CacheFirst is safe because Vite hashes filenames on every build
-            urlPattern: /\/Newark-Tree-Care\/assets\/.+\.(js|css)(\?.*)?$/i,
+            urlPattern: /\/assets\/.+\.(js|css)(\?.*)?$/i,
             handler: 'CacheFirst',
             options: {
               cacheName: 'static-resources-v1',
@@ -86,7 +89,7 @@ export default defineConfig({
         theme_color: '#064e3b',
         background_color: '#ffffff',
         display: 'standalone',
-        start_url: '/Newark-Tree-Care/',
+        start_url: base,
         icons: [
           {
             src: 'assets/logo.jpg',
@@ -97,7 +100,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/Newark-Tree-Care/',
+  base: base,
   resolve: {
     alias: {
       'react': 'preact/compat',
