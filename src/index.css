@@ -634,6 +634,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px dashed rgba(93, 232, 200, 0.4);
   border-radius: 50%;
   animation: spinSlow 30s infinite linear;
+  will-change: transform;
+  contain: layout style paint;
 }
 
 @keyframes spinSlow {
@@ -809,6 +811,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   box-shadow: 0 0 8px #f87171;
   animation: pulseBeaconGlow 1.8s infinite alternate;
+  will-change: transform, opacity;
+  contain: layout style paint;
 }
 
 @keyframes pulseBeaconGlow {
@@ -1984,6 +1988,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 450px;
   background: radial-gradient(circle, #52b788 0%, transparent 70%);
   animation: morphBlobOne 25s infinite alternate ease-in-out;
+  will-change: transform;
+  contain: layout style paint;
 }
 
 .blob-2 {
@@ -1993,6 +1999,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 500px;
   background: radial-gradient(circle, #0d7a6e 0%, transparent 70%);
   animation: morphBlobTwo 30s infinite alternate ease-in-out;
+  will-change: transform;
+  contain: layout style paint;
 }
 
 .blob-3 {
@@ -2003,6 +2011,8 @@ h1, h2, h3, h4, h5, h6 {
   background: radial-gradient(circle, #5de8c8 0%, transparent 70%);
   opacity: 0.15;
   animation: morphBlobThree 22s infinite alternate ease-in-out;
+  will-change: transform;
+  contain: layout style paint;
 }
 
 /* Liquid Blob Morphing Keyframes (Apple/Stripe Style) - Composited transform-only animation */
@@ -2051,11 +2061,12 @@ h1, h2, h3, h4, h5, h6 {
   bottom: -50px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(93, 232, 200, 0.9) 0%, rgba(100, 210, 195, 0.4) 40%, transparent 70%);
-  filter: blur(1px);
-  box-shadow: 0 0 15px rgba(93, 232, 200, 0.7);
+  box-shadow: 0 0 20px 4px rgba(93, 232, 200, 0.6);
   pointer-events: none;
   z-index: -1;
   animation: floatFirefly 22s infinite ease-in-out;
+  will-change: transform, opacity;
+  contain: layout style paint;
 }
 
 @keyframes floatFirefly {
