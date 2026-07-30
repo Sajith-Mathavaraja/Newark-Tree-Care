@@ -259,10 +259,10 @@ export default function App() {
            <div className="hero-composition-wrapper">
             <div className="hero-main-frame">
                 <picture>
-                  <source media="(max-width: 600px)" srcSet="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif%2Cq_75%2Cw_450/hero_arborist_q6wspn" />
-                  <source media="(min-width: 601px)" srcSet="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif%2Cq_75%2Cw_800/hero_arborist_q6wspn" />
+                  <source media="(max-width: 600px)" srcSet="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif%2Cq_45%2Cw_450/hero_arborist_q6wspn" />
+                  <source media="(min-width: 601px)" srcSet="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif%2Cq_65%2Cw_800/hero_arborist_q6wspn" />
                   <img 
-                    src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif%2Cq_75%2Cw_800/hero_arborist_q6wspn" 
+                    src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif%2Cq_65%2Cw_800/hero_arborist_q6wspn" 
                     alt="Professional Arborist at work in Newark" 
                     width="800" 
                     height="446" 
