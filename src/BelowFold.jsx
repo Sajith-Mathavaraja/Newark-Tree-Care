@@ -30,11 +30,11 @@ const faqs = [
 ];
 
 const serviceDetails = {
-  assessment: { title: "Tree Assessment & Consultation", desc: "Every tree has different needs. Our certified arborist evaluates tree health, structural integrity, soil quality, and potential risks to provide tailored care recommendations.", img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_80,w_600/service_assessment_jh70qw", imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_webp,q_80,w_600/service_assessment_jh70qw", imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_80,w_600/service_assessment_jh70qw", points: ["Evaluation of structural hazards and disease","Soil condition and root flare inspections","Pest infestation assessment","Customized long-term preservation planning"] },
-  pruning: { title: "Precision Tree Pruning & Trimming", desc: "Proper pruning helps trees grow stronger while improving their overall appearance and safety. Our crew uses ISA canopy techniques to shape your trees beautifully.", img: "assets/service_pruning.jpg?v=5", imgWebp: "assets/service_pruning.webp?v=1", imgAvif: "assets/service_pruning.avif?v=1", points: ["Crown thinning for improved air & light flow","Deadwooding and safety clearing of heavy branches","Directional structural pruning for young trees","Meticulous cleanup and lawn protection"] },
-  removal: { title: "Safe Tree Removal & Felling", desc: "When a tree becomes dangerous, diseased, or unwanted, professional removal is the best path. We employ top rigging safety systems to fell trees with minimal landscape impact.", img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_80,w_600/service_removal_gezia2", imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_webp,q_80,w_600/service_removal_gezia2", imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_80,w_600/service_removal_gezia2", points: ["Hazardous and leaning tree removal","Storm-damaged structure extraction","Crane-assisted complex tree felling","Full safety buffer zone management"] },
-  stump: { title: "Stump & Root Management", desc: "Old stumps can invite pests and ruin lawn layouts. We use high-powered hydraulic grinders to pulverize stumps below grade, leaving space ready for planting.", img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_80,w_600/service_stump_tzemwh", imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_webp,q_80,w_600/service_stump_tzemwh", imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_80,w_600/service_stump_tzemwh", points: ["Deep root grinding down to 12 inches below soil","Yard and root zone preparation for replanting","Backfilling with fertile topsoil and grass seed","Wood chip disposal and lawn restoration"] },
-  emergency: { title: "Emergency Tree Response", desc: "Unexpected tree failures require immediate, skilled intervention. Our emergency crew is ready to secure your roofline, vehicles, and driveways as soon as possible.", img: "assets/service_emergency.jpg?v=5", imgWebp: "assets/service_emergency.webp?v=1", imgAvif: "assets/service_emergency.avif?v=1", points: ["Immediate hazard stabilization","Storm cleanup and damage control","Leaning tree cabling and bracing","Direct insurance documentation support"] }
+  assessment: { title: "Tree Assessment & Consultation", desc: "Every tree has different needs. Our certified arborist evaluates tree health, structural integrity, soil quality, and potential risks to provide tailored care recommendations.", img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_100,w_1200/service_assessment_jh70qw", imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_webp,q_100,w_1200/service_assessment_jh70qw", imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_100,w_1200/service_assessment_jh70qw", points: ["Evaluation of structural hazards and disease","Soil condition and root flare inspections","Pest infestation assessment","Customized long-term preservation planning"] },
+  pruning: { title: "Precision Tree Pruning & Trimming", desc: "Proper pruning helps trees grow stronger while improving their overall appearance and safety. Our crew uses ISA canopy techniques to shape your trees beautifully.", img: "assets/service_pruning.jpg?v=5", imgWebp: null, imgAvif: null, points: ["Crown thinning for improved air & light flow","Deadwooding and safety clearing of heavy branches","Directional structural pruning for young trees","Meticulous cleanup and lawn protection"] },
+  removal: { title: "Safe Tree Removal & Felling", desc: "When a tree becomes dangerous, diseased, or unwanted, professional removal is the best path. We employ top rigging safety systems to fell trees with minimal landscape impact.", img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_100,w_1200/service_removal_gezia2", imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_webp,q_100,w_1200/service_removal_gezia2", imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_100,w_1200/service_removal_gezia2", points: ["Hazardous and leaning tree removal","Storm-damaged structure extraction","Crane-assisted complex tree felling","Full safety buffer zone management"] },
+  stump: { title: "Stump & Root Management", desc: "Old stumps can invite pests and ruin lawn layouts. We use high-powered hydraulic grinders to pulverize stumps below grade, leaving space ready for planting.", img: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_100,w_1200/service_stump_tzemwh", imgWebp: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_webp,q_100,w_1200/service_stump_tzemwh", imgAvif: "https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_100,w_1200/service_stump_tzemwh", points: ["Deep root grinding down to 12 inches below soil","Yard and root zone preparation for replanting","Backfilling with fertile topsoil and grass seed","Wood chip disposal and lawn restoration"] },
+  emergency: { title: "Emergency Tree Response", desc: "Unexpected tree failures require immediate, skilled intervention. Our emergency crew is ready to secure your roofline, vehicles, and driveways as soon as possible.", img: "assets/service_emergency.jpg?v=5", imgWebp: null, imgAvif: null, points: ["Immediate hazard stabilization","Storm cleanup and damage control","Leaning tree cabling and bracing","Direct insurance documentation support"] }
 };
 
 const getServiceIcon = (key, size = 20) => {
@@ -146,7 +146,7 @@ export default function BelowFold({
               <div className="overview-asymmetric-photo">
                 <div className="photo-backing-card"></div>
                 <div className="photo-front-frame">
-                  <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_80,w_600/tree_services_zu0ne8" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" loading="lazy" />
+                  <img src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_auto,q_100,w_1200/tree_services_zu0ne8" alt="Our arborist crew operating tree chipping equipment safely" width="600" height="448" loading="lazy" />
                 </div>
               </div>
               
@@ -267,8 +267,12 @@ export default function BelowFold({
               position: 'relative'
             }}>
               <picture>
-                <source srcSet={serviceDetails[activeServiceTab].imgAvif} type="image/avif" />
-                <source srcSet={serviceDetails[activeServiceTab].imgWebp} type="image/webp" />
+                {serviceDetails[activeServiceTab].imgAvif && (
+                  <source srcSet={serviceDetails[activeServiceTab].imgAvif} type="image/avif" />
+                )}
+                {serviceDetails[activeServiceTab].imgWebp && (
+                  <source srcSet={serviceDetails[activeServiceTab].imgWebp} type="image/webp" />
+                )}
                 <img 
                   src={serviceDetails[activeServiceTab].img} 
                   alt={serviceDetails[activeServiceTab].title} 
