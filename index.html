@@ -81,13 +81,21 @@
         </div>
         <img class="ph-img"
           src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_75,w_800/hero_arborist_q6wspn"
-          srcset="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_75,w_450/hero_arborist_q6wspn 450w, https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_75,w_800/hero_arborist_q6wspn 800w"
-          sizes="(max-width: 600px) 450px, 800px"
           alt="Professional Arborist at work in Newark"
           width="400" height="267"
           fetchpriority="high"
           decoding="async"
+          id="ph-hero-img"
         />
+        <script>
+          (function() {
+            var img = document.getElementById('ph-hero-img');
+            if (img) {
+              img.setAttribute('srcset', 'https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_75,w_450/hero_arborist_q6wspn 450w, https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_75,w_800/hero_arborist_q6wspn 800w');
+              img.setAttribute('sizes', '(max-width: 600px) 450px, 800px');
+            }
+          })();
+        </script>
       </section>
     </div>
 
