@@ -70,10 +70,12 @@ export default function App() {
     };
   }, []);
 
-  // Scroll & Scroll Spy effect — deferred via rAF to avoid forced reflow during first paint
+  // Scroll & Scroll Spy — tracks all section intersections and highlights the most-visible one
   useEffect(() => {
     let rafId;
     let observer;
+    // Map of sectionId -> current intersectionRatio
+    const ratioMap = {};
 
     const setup = () => {
       const handleScroll = () => {
@@ -81,26 +83,36 @@ export default function App() {
       };
       window.addEventListener('scroll', handleScroll, { passive: true });
 
-      // Modern IntersectionObserver scroll spy to prevent layout thrashing / forced reflows
+      const sections = ['home', 'about', 'services', 'approach', 'why-us', 'contact'];
+
+      // Use multiple thresholds for smooth, accurate detection
       const observerOptions = {
         root: null,
-        rootMargin: '-10% 0px -50% 0px',
-        threshold: 0
+        rootMargin: '0px',
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
       };
 
       const observerCallback = (entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          ratioMap[entry.target.id] = entry.intersectionRatio;
         });
+        // Pick whichever section has the highest visible ratio
+        let best = null;
+        let bestRatio = -1;
+        sections.forEach(id => {
+          const r = ratioMap[id] || 0;
+          if (r > bestRatio) { bestRatio = r; best = id; }
+        });
+        if (best) setActiveSection(best);
       };
 
       observer = new IntersectionObserver(observerCallback, observerOptions);
-      const sections = ['home', 'about', 'services', 'approach', 'why-us', 'contact'];
       sections.forEach(id => {
         const el = document.getElementById(id);
-        if (el) observer.observe(el);
+        if (el) {
+          ratioMap[id] = 0;
+          observer.observe(el);
+        }
       });
 
       return () => {
