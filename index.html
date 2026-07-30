@@ -20,8 +20,8 @@
     <!-- Preload logo (shared by pre-hero and React app — same URL avoids double download) -->
     <link rel="preload" as="image" href="assets/logo.webp?v=1" type="image/webp" />
 
-    <!-- Preload LCP hero image from Cloudinary CDN in ultra-compact AVIF format -->
-    <link rel="preload" as="image" href="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_65,w_720/hero_arborist_q6wspn" type="image/avif" fetchpriority="high" />
+    <!-- Preload LCP hero image from Cloudinary CDN in responsive sizes (q_75 quality) -->
+    <link rel="preload" as="image" href="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_75,w_800/hero_arborist_q6wspn" imagesrcset="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_75,w_450/hero_arborist_q6wspn 450w, https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_75,w_800/hero_arborist_q6wspn 800w" imagesizes="(max-width: 600px) 450px, 800px" fetchpriority="high" />
 
     <!-- Critical inline CSS for above-the-fold pre-rendered content (eliminates blank flash before JS loads) -->
     <style>
@@ -80,7 +80,9 @@
           </div>
         </div>
         <img class="ph-img"
-          src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_65,w_720/hero_arborist_q6wspn"
+          src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_75,w_800/hero_arborist_q6wspn"
+          srcset="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_75,w_450/hero_arborist_q6wspn 450w, https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_75,w_800/hero_arborist_q6wspn 800w"
+          sizes="(max-width: 600px) 450px, 800px"
           alt="Professional Arborist at work in Newark"
           width="400" height="267"
           fetchpriority="high"
