@@ -264,15 +264,15 @@ export default function App() {
                   <img 
                     src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif%2Cq_65%2Cw_800/hero_arborist_q6wspn" 
                     alt="Professional Arborist at work in Newark" 
-                    width="800" 
-                    height="446" 
+                    width="400" 
+                    height="223" 
                     fetchPriority="high" 
                   />
                 </picture>
             </div>
             
             <div className="hero-secondary-card">
-              <img src={estateAvif} alt="Beautiful Estate Tree Care" width="800" height="446" />
+              <img src={estateAvif} alt="Beautiful Estate Tree Care" width="400" height="223" />
               <div className="hero-secondary-badge">
                 <span>✓ Property Care Excellence</span>
               </div>
