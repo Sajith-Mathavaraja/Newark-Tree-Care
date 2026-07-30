@@ -60,7 +60,6 @@ export default function BelowFold({
   const contactRef = useRef(null);
   const [contactVisible, setContactVisible] = useState(false);
 
-  // Dynamic IntersectionObserver to load form scripts & iframe only when scrolled near contact
   useEffect(() => {
     // Detect Lighthouse/PageSpeed crawls and bypass third-party script loading
     const isPerformanceBot = () => {
@@ -75,29 +74,18 @@ export default function BelowFold({
     };
 
     if (isPerformanceBot()) {
-      return; // Do not execute observer or load third-party scripts for bots
+      return; // Do not execute or load third-party scripts for bots
     }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setContactVisible(true);
-          const script = document.createElement('script');
-          script.src = 'https://link.kdlead.com/js/form_embed.js';
-          script.async = true;
-          document.body.appendChild(script);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '200px' }
-    );
-
-    if (contactRef.current) {
-      observer.observe(contactRef.current);
-    }
+    // Set contact visible and load script immediately on BelowFold mount
+    // This allows the iframe to pre-load, so the form is visible instantly on scroll.
+    setContactVisible(true);
+    const script = document.createElement('script');
+    script.src = 'https://link.kdlead.com/js/form_embed.js';
+    script.async = true;
+    document.body.appendChild(script);
 
     return () => {
-      observer.disconnect();
       const existingScript = document.querySelector('script[src="https://link.kdlead.com/js/form_embed.js"]');
       if (existingScript) {
         existingScript.remove();
