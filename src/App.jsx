@@ -47,9 +47,8 @@ export default function App() {
   const [activeLegalModal, setActiveLegalModal] = useState(null);
 
   // Lazy loading states for third-party iframe & script to avoid blocking main thread
-  const contactRef = React.useRef(null);
-  const [contactVisible, setContactVisible] = useState(false);
   const [loadBelowFold, setLoadBelowFold] = useState(false);
+  // contactRef and contactVisible now live in BelowFold.jsx (fixes stuck "Loading secure form")
 
   // Defer BelowFold JS chunk — but NEVER load it during Lighthouse/PageSpeed audits.
   // navigator.webdriver=true is set by Lighthouse, preventing BelowFold from appearing
@@ -106,50 +105,7 @@ export default function App() {
     };
   }, []);
 
-  // Dynamic IntersectionObserver to load form scripts & iframe only when scrolled near contact
-  useEffect(() => {
-    // Detect Lighthouse/PageSpeed crawls and bypass third-party script loading
-    const isPerformanceBot = () => {
-      if (typeof window === 'undefined') return false;
-      const ua = window.navigator.userAgent.toLowerCase();
-      return (
-        ua.includes('lighthouse') ||
-        ua.includes('pagespeed') ||
-        ua.includes('speed') ||
-        window.navigator.webdriver
-      );
-    };
-
-    if (isPerformanceBot()) {
-      return; // Do not execute observer or load third-party scripts for bots
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setContactVisible(true);
-          const script = document.createElement('script');
-          script.src = 'https://link.kdlead.com/js/form_embed.js';
-          script.async = true;
-          document.body.appendChild(script);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '200px' }
-    );
-
-    if (contactRef.current) {
-      observer.observe(contactRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-      const existingScript = document.querySelector('script[src="https://link.kdlead.com/js/form_embed.js"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
+  // Contact form IntersectionObserver is now inside BelowFold.jsx where the DOM element exists
 
   const triggerToast = (msg) => {
     setToast(msg);
@@ -329,8 +285,6 @@ export default function App() {
             setTestimonialIndex={setTestimonialIndex}
             activeFaq={activeFaq}
             setActiveFaq={setActiveFaq}
-            contactRef={contactRef}
-            contactVisible={contactVisible}
             activeLegalModal={activeLegalModal}
             setActiveLegalModal={setActiveLegalModal}
             triggerToast={triggerToast}
