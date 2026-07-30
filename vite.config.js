@@ -14,7 +14,8 @@ export default defineConfig({
       base: '/Newark-Tree-Care/',
       scope: '/Newark-Tree-Care/',
       workbox: {
-        // Cache all static assets (images, JS, CSS) for 30 days
+        // Cache all static assets (images, JS, CSS) for long periods
+        // Safe: Vite content-hashes all filenames so stale cache is never an issue
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/res\.cloudinary\.com\/.*/i,
@@ -23,7 +24,7 @@ export default defineConfig({
               cacheName: 'cloudinary-images-v1',
               expiration: {
                 maxEntries: 50,
-                maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
               },
               cacheableResponse: {
                 statuses: [0, 200],
@@ -37,7 +38,7 @@ export default defineConfig({
               cacheName: 'images-cache-v1',
               expiration: {
                 maxEntries: 60,
-                maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
               },
               cacheableResponse: {
                 statuses: [0, 200],
@@ -45,13 +46,17 @@ export default defineConfig({
             },
           },
           {
+            // JS and CSS bundles — CacheFirst is safe because Vite hashes filenames on every build
             urlPattern: /\/Newark-Tree-Care\/assets\/.+\.(js|css)(\?.*)?$/i,
-            handler: 'StaleWhileRevalidate',
+            handler: 'CacheFirst',
             options: {
               cacheName: 'static-resources-v1',
               expiration: {
                 maxEntries: 20,
-                maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
+                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
               },
             },
           },
