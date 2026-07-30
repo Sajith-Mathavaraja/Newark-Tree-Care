@@ -93,6 +93,14 @@ export default defineConfig({
     }),
   ],
   base: '/Newark-Tree-Care/',
+  resolve: {
+    alias: {
+      'react': 'preact/compat',
+      'react-dom/test-utils': 'preact/compat/test-utils',
+      'react-dom': 'preact/compat',
+      'react/jsx-runtime': 'preact/compat/jsx-runtime'
+    }
+  },
   server: {
     port: 3000,
     open: true
