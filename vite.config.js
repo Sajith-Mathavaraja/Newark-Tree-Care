@@ -101,6 +101,16 @@ export default defineConfig({
     }),
   ],
   base: base,
+  build: {
+    // Exclude lazy-loaded BelowFold chunk from modulePreload hints.
+    // Without this, Vite adds <link rel="modulepreload"> for BelowFold,
+    // making Lighthouse count it as a critical network dependency (494ms penalty).
+    modulePreload: {
+      resolveDependencies: (filename, deps) => {
+        return deps.filter(dep => !dep.includes('BelowFold'));
+      }
+    }
+  },
   resolve: {
     alias: {
       'react': 'preact/compat',
