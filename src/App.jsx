@@ -118,7 +118,7 @@ export default function App() {
       cancelAnimationFrame(rafId);
       if (cleanup) cleanup();
     };
-  }, []);
+  }, [loadBelowFold]);
 
   // Contact form IntersectionObserver is now inside BelowFold.jsx where the DOM element exists
 
@@ -195,7 +195,10 @@ export default function App() {
                   <a 
                     href={`#${item.id}`} 
                     className={`nav-link-item ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : 'pending'}`} 
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setLoadBelowFold(true);
+                    }}
                   >
                     <span className="nav-node">{index + 1}</span>
                     <span className="nav-label">{item.label}</span>
