@@ -70,38 +70,53 @@ export default function App() {
     };
   }, []);
 
-  // Scroll & Scroll Spy effect
+  // Scroll & Scroll Spy effect — deferred via rAF to avoid forced reflow during first paint
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    let rafId;
+    let observer;
 
-    // Modern IntersectionObserver scroll spy to prevent layout thrashing / forced reflows
-    const observerOptions = {
-      root: null,
-      rootMargin: '-10% 0px -50% 0px',
-      threshold: 0
-    };
+    const setup = () => {
+      const handleScroll = () => {
+        setScrolled(window.scrollY > 30);
+      };
+      window.addEventListener('scroll', handleScroll, { passive: true });
 
-    const observerCallback = (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
+      // Modern IntersectionObserver scroll spy to prevent layout thrashing / forced reflows
+      const observerOptions = {
+        root: null,
+        rootMargin: '-10% 0px -50% 0px',
+        threshold: 0
+      };
+
+      const observerCallback = (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      };
+
+      observer = new IntersectionObserver(observerCallback, observerOptions);
+      const sections = ['home', 'about', 'services', 'approach', 'why-us', 'contact'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
       });
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+        observer.disconnect();
+      };
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    const sections = ['home', 'about', 'services', 'approach', 'why-us', 'contact'];
-    sections.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
+    let cleanup;
+    rafId = requestAnimationFrame(() => {
+      cleanup = setup();
     });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      observer.disconnect();
+      cancelAnimationFrame(rafId);
+      if (cleanup) cleanup();
     };
   }, []);
 
