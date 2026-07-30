@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Newark Tree Care | Expert Tree Solutions for a Safer, Healthier Outdoor Space</title>
     <meta name="description" content="Newark Tree Care provides expert tree trimming, pruning, tree removal, stump grinding, and 24/7 emergency response in Newark, NJ." />
-    <link rel="icon" type="image/webp" href="assets/logo.webp" />
+    <link rel="icon" type="image/webp" href="assets/logo.webp?v=1" />
     
     <!-- Preconnect to Fonts Server to reduce FCP/LCP latency -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
     <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
+    <!-- Preload logo (shared by pre-hero and React app — same URL avoids double download) -->
+    <link rel="preload" as="image" href="assets/logo.webp?v=1" type="image/webp" />
+
     <!-- Preload LCP hero image from Cloudinary CDN in ultra-compact AVIF format -->
     <link rel="preload" as="image" href="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_400/hero_arborist_q6wspn" type="image/avif" fetchpriority="high" />
 
@@ -24,8 +27,9 @@
     <style>
       *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
       body{background:#0a352e;color:#fff;font-family:'Outfit',system-ui,sans-serif;min-height:100vh}
-      #pre-hero{position:relative;min-height:100svh;display:flex;flex-direction:column;background:#0a352e}
-      .ph-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,53,46,0.85);backdrop-filter:blur(12px)}
+      #pre-hero{position:relative;min-height:100svh;display:flex;flex-direction:column;background:#0a352e;contain:layout style}
+      /* No backdrop-filter — it triggers GPU compositing & layout recalculation on every frame */
+      .ph-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,53,46,0.95)}
       .ph-brand{display:flex;align-items:center;gap:0.6rem}
       .ph-brand img{width:36px;height:36px;border-radius:8px}
       .ph-brand-name{font-size:1rem;font-weight:800;color:#fff}
@@ -47,11 +51,12 @@
     </style>
   </head>
   <body>
-    <!-- Pre-rendered hero: shown immediately while JS loads — replaced by React on hydration -->
+    <!-- Pre-rendered hero: shown immediately while JS loads — removed by React before mounting -->
     <div id="pre-hero" aria-hidden="true">
       <header class="ph-header">
         <div class="ph-brand">
-          <img src="assets/logo.webp" alt="Newark Tree Care" width="36" height="36" />
+          <!-- Use same URL as React app to share browser cache — no double download -->
+          <img src="assets/logo.webp?v=1" alt="Newark Tree Care" width="36" height="36" />
           <div>
             <div class="ph-brand-name">Newark Tree Care</div>
             <div class="ph-brand-sub">Expert Tree Solutions</div>
