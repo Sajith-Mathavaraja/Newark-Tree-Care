@@ -78,19 +78,20 @@ export default function BelowFold({
       return; // Do not execute or load third-party scripts for bots
     }
 
-    // Set contact visible and load script immediately on BelowFold mount
-    // This allows the iframe to pre-load, so the form is visible instantly on scroll.
+    // Set contact visible immediately so iframe starts loading
     setContactVisible(true);
-    const script = document.createElement('script');
-    script.src = 'https://link.kdlead.com/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
+
+    // Only inject the script if App.jsx hasn't already done it on first interaction
+    if (!document.querySelector('script[src*="kdlead.com"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://link.kdlead.com/js/form_embed.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
 
     return () => {
-      const existingScript = document.querySelector('script[src="https://link.kdlead.com/js/form_embed.js"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
+      const existingScript = document.querySelector('script[src*="kdlead.com"]');
+      if (existingScript) existingScript.remove();
     };
   }, []);
   return (
