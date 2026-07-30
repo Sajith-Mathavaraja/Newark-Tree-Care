@@ -67,7 +67,7 @@ export default function App() {
 
   // Scroll & Scroll Spy — tracks all section intersections and highlights the most-visible one
   useEffect(() => {
-    let rafId;
+    let timerId;
     let observer;
     // Map of sectionId -> current intersectionRatio
     const ratioMap = {};
@@ -117,12 +117,22 @@ export default function App() {
     };
 
     let cleanup;
-    rafId = requestAnimationFrame(() => {
-      cleanup = setup();
-    });
+    if (loadBelowFold) {
+      // Wait 500ms after BelowFold triggers — lazy chunk needs time to download + render
+      // its sections (#about, #services, etc.) before the observer can attach to them.
+      timerId = setTimeout(() => {
+        cleanup = setup();
+      }, 500);
+    } else {
+      // Initial run (only #home exists) — defer one frame to avoid forced reflow on first paint
+      timerId = requestAnimationFrame(() => {
+        cleanup = setup();
+      });
+    }
 
     return () => {
-      cancelAnimationFrame(rafId);
+      if (loadBelowFold) clearTimeout(timerId);
+      else cancelAnimationFrame(timerId);
       if (cleanup) cleanup();
     };
   }, [loadBelowFold]);
