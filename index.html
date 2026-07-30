@@ -19,8 +19,71 @@
 
     <!-- Preload LCP hero image from Cloudinary CDN in ultra-compact AVIF format -->
     <link rel="preload" as="image" href="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_400/hero_arborist_q6wspn" type="image/avif" fetchpriority="high" />
+
+    <!-- Critical inline CSS for above-the-fold pre-rendered content (eliminates blank flash before JS loads) -->
+    <style>
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      body{background:#0a352e;color:#fff;font-family:'Outfit',system-ui,sans-serif;min-height:100vh}
+      #pre-hero{position:relative;min-height:100svh;display:flex;flex-direction:column;background:#0a352e}
+      .ph-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,53,46,0.85);backdrop-filter:blur(12px)}
+      .ph-brand{display:flex;align-items:center;gap:0.6rem}
+      .ph-brand img{width:36px;height:36px;border-radius:8px}
+      .ph-brand-name{font-size:1rem;font-weight:800;color:#fff}
+      .ph-brand-sub{font-size:0.65rem;color:#64d2c3;font-weight:500}
+      .ph-cta{background:linear-gradient(135deg,#1db39b,#0d7a6e);color:#fff;padding:0.5rem 1rem;border-radius:9999px;font-weight:700;font-size:0.85rem;text-decoration:none;white-space:nowrap}
+      .ph-hero{display:flex;flex-direction:column;justify-content:center;padding:6rem 1.25rem 3rem;min-height:100svh}
+      .ph-badge{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(29,179,155,0.15);border:1px solid rgba(29,179,155,0.3);color:#5de8c8;padding:0.4rem 0.85rem;border-radius:9999px;font-size:0.78rem;font-weight:600;margin-bottom:1.5rem}
+      .ph-h1{font-size:clamp(2rem,8vw,3rem);font-weight:900;line-height:1.1;color:#fff;margin-bottom:1rem}
+      .ph-h1 span{color:#1db39b}
+      .ph-sub{font-size:1rem;color:#d0eeea;line-height:1.6;margin-bottom:2rem;max-width:38ch}
+      .ph-btns{display:flex;gap:0.75rem;flex-wrap:wrap}
+      .ph-btn-primary{background:linear-gradient(135deg,#1db39b,#0d7a6e);color:#fff;padding:0.85rem 1.5rem;border-radius:9999px;font-weight:700;font-size:0.95rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem}
+      .ph-btn-secondary{background:transparent;color:#5de8c8;padding:0.85rem 1.5rem;border-radius:9999px;font-weight:600;font-size:0.95rem;text-decoration:none;border:1.5px solid rgba(93,232,200,0.4)}
+      .ph-img{width:100%;border-radius:1.5rem;margin-top:2rem;display:block}
+      .ph-stats{display:flex;gap:1.5rem;margin-top:2rem;flex-wrap:wrap}
+      .ph-stat-num{font-size:1.6rem;font-weight:900;color:#1db39b}
+      .ph-stat-lbl{font-size:0.75rem;color:#94c9c2;font-weight:500}
+      @media(min-width:768px){.ph-hero{flex-direction:row;align-items:center;gap:3rem;padding:7rem 3rem 3rem}.ph-hero-text{flex:1}.ph-img{margin-top:0;max-width:420px}}
+    </style>
   </head>
   <body>
+    <!-- Pre-rendered hero: shown immediately while JS loads — replaced by React on hydration -->
+    <div id="pre-hero" aria-hidden="true">
+      <header class="ph-header">
+        <div class="ph-brand">
+          <img src="assets/logo.webp" alt="Newark Tree Care" width="36" height="36" />
+          <div>
+            <div class="ph-brand-name">Newark Tree Care</div>
+            <div class="ph-brand-sub">Expert Tree Solutions</div>
+          </div>
+        </div>
+        <a href="tel:5105458733" class="ph-cta">📞 510-545-8733</a>
+      </header>
+      <section class="ph-hero">
+        <div class="ph-hero-text">
+          <div class="ph-badge">⭐ ISA Certified Arborists — Newark, CA</div>
+          <h1 class="ph-h1">Expert Tree Care<br/><span>You Can Trust</span></h1>
+          <p class="ph-sub">From precision pruning to emergency removal — Newark's #1 certified arborist team protects your property and trees.</p>
+          <div class="ph-btns">
+            <a href="tel:5105458733" class="ph-btn-primary">Get Free Quote</a>
+            <a href="#services" class="ph-btn-secondary">Our Services</a>
+          </div>
+          <div class="ph-stats">
+            <div><div class="ph-stat-num">500+</div><div class="ph-stat-lbl">Trees Serviced</div></div>
+            <div><div class="ph-stat-num">15+</div><div class="ph-stat-lbl">Years Experience</div></div>
+            <div><div class="ph-stat-num">100%</div><div class="ph-stat-lbl">Satisfaction Rate</div></div>
+          </div>
+        </div>
+        <img class="ph-img"
+          src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_35,w_400/hero_arborist_q6wspn"
+          alt="Professional Arborist at work in Newark"
+          width="400" height="267"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </section>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <script>
