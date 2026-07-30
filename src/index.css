@@ -2503,6 +2503,16 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: scale(1.05); opacity: 1; }
 }
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.85; }
+}
+
 /* Responsive Overrides */
 @media (max-width: 992px) {
   .about-hero-title { font-size: 3rem; }

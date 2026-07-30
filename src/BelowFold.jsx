@@ -59,6 +59,7 @@ export default function BelowFold({
 }) {
   const contactRef = useRef(null);
   const [contactVisible, setContactVisible] = useState(false);
+  const [formLoaded, setFormLoaded] = useState(false);
 
   useEffect(() => {
     // Detect Lighthouse/PageSpeed crawls and bypass third-party script loading
@@ -478,11 +479,45 @@ export default function BelowFold({
               </div>
               <a href="tel:5105458733" className="btn-solid-green">Call 510-545-8733</a>
             </div>
-            <div ref={contactRef} className="contact-form-card" style={{ padding: '0.75rem', minHeight: '580px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              {contactVisible ? (
+            <div ref={contactRef} className="contact-form-card" style={{ padding: '0.75rem', minHeight: '580px', position: 'relative', overflow: 'hidden' }}>
+              {/* Animated skeleton shown while form iframe loads */}
+              {(!contactVisible || !formLoaded) && (
+                <div style={{
+                  position: 'absolute', inset: 0,
+                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                  gap: '1.25rem', padding: '2rem'
+                }}>
+                  <div style={{
+                    width: '48px', height: '48px', borderRadius: '50%',
+                    border: '4px solid rgba(45,212,191,0.2)',
+                    borderTop: '4px solid #2dd4bf',
+                    animation: 'spin 1s linear infinite'
+                  }} />
+                  <div style={{ color: '#2dd4bf', fontSize: '0.95rem', fontWeight: 600, letterSpacing: '0.05em' }}>Loading Secure Form…</div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', width: '100%', maxWidth: '340px' }}>
+                    {[80, 100, 60, 100, 48].map((w, i) => (
+                      <div key={i} style={{
+                        height: i === 4 ? '44px' : '18px',
+                        width: `${w}%`,
+                        borderRadius: '8px',
+                        background: 'rgba(255,255,255,0.07)',
+                        animation: `pulse 1.6s ease-in-out ${i * 0.15}s infinite`
+                      }} />
+                    ))}
+                  </div>
+                </div>
+              )}
+              {/* Actual form iframe — hidden until loaded, then fades in */}
+              {contactVisible && (
                 <iframe
                   src="https://link.kdlead.com/widget/form/8UDU6zVGceOYljhIyUvu"
-                  style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
+                  style={{
+                    width: '100%', height: '100%', minHeight: '560px',
+                    border: 'none', borderRadius: '8px',
+                    opacity: formLoaded ? 1 : 0,
+                    transition: 'opacity 0.5s ease',
+                    display: 'block'
+                  }}
                   id="inline-8UDU6zVGceOYljhIyUvu"
                   data-layout="{'id':'INLINE'}"
                   data-trigger-type="alwaysShow"
@@ -496,10 +531,8 @@ export default function BelowFold({
                   data-layout-iframe-id="inline-8UDU6zVGceOYljhIyUvu"
                   data-form-id="8UDU6zVGceOYljhIyUvu"
                   title="Newark Tree Care"
-                  loading="lazy"
+                  onLoad={() => setFormLoaded(true)}
                 />
-              ) : (
-                <div style={{ color: '#ffffff', fontSize: '0.95rem', fontWeight: 600 }}>Loading secure form...</div>
               )}
             </div>
           </div>
