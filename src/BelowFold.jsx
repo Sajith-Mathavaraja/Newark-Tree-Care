@@ -629,20 +629,20 @@ export default function BelowFold({
                 <div>
                   <h2 style={{ color: '#ffffff', fontSize: '1.8rem', marginBottom: '0.5rem' }}>Terms &amp; Conditions</h2>
                   <div style={{ color: '#2dd4bf', fontSize: '0.85rem', fontWeight: 700, marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.75rem' }}>Effective Date: January 19, 2025 &nbsp;|&nbsp; Last Updated: July 9, 2026</div>
-                  <p style={{ marginBottom: '1.25rem' }}>Welcome to City Roots Tree Services. By accessing this website or using our services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our website or services.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>Welcome to Newark Tree Care. By accessing this website or using our services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our website or services.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>1. Business Identity</h3>
-                  <p style={{ marginBottom: '1.25rem' }}>These Terms and Conditions govern your use of the services provided by City Roots Tree Services, located at 9950 County Rd, Clarence Center, NY 14032. Contact: 716-274-9576 | info@cityrootstreeservices.com.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>These Terms and Conditions govern your use of the services provided by Newark Tree Care, located at 6821 Central Ave, Newark, CA 94560. Contact: 510-545-8733.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>2. Age Requirement (18+)</h3>
                   <p style={{ marginBottom: '1.25rem' }}>By using this website or enrolling in our services, including SMS messaging, you confirm that you are at least 18 years of age. Our SMS program is not directed to individuals under 18.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>3. Terminology</h3>
-                  <p style={{ marginBottom: '1.25rem' }}>“Client,” “You,” and “Your” refers to the user of this website. “The Company,” “We,” “Our,” and “Us” refers to City Roots Tree Services.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>“Client,” “You,” and “Your” refers to the user of this website. “The Company,” “We,” “Our,” and “Us” refers to Newark Tree Care.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>4. SMS Messaging Terms of Service</h3>
                   <h4 style={{ color: '#ffffff', fontSize: '1rem', marginTop: '1rem', marginBottom: '0.25rem' }}>4a. Program Description &amp; Message Types</h4>
-                  <p style={{ marginBottom: '0.75rem' }}>By providing your phone number and checking the SMS consent checkbox on our contact forms, you agree to receive recurring automated text messages from City Roots Tree Services. Messages may include:</p>
+                  <p style={{ marginBottom: '0.75rem' }}>By providing your phone number and checking the SMS consent checkbox on our contact forms, you agree to receive recurring automated text messages from Newark Tree Care. Messages may include:</p>
                   <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.25rem', listStyleType: 'disc' }}>
                     <li>Free estimate confirmations and scheduling notifications</li>
                     <li>Appointment reminders and project status updates</li>
@@ -654,7 +654,7 @@ export default function BelowFold({
                   <p style={{ marginBottom: '1.25rem' }}>Message frequency varies based on your service activity and interactions with us. You may receive up to 4–8 messages per month. Frequency may increase during active service periods.</p>
                   
                   <h4 style={{ color: '#ffffff', fontSize: '1rem', marginTop: '1rem', marginBottom: '0.25rem' }}>4c. Message &amp; Data Rates</h4>
-                  <p style={{ marginBottom: '1.25rem' }}>Message and data rates may apply for any messages sent to you from us and to us from you. Charges are determined by your mobile carrier and your individual service plan. City Roots Tree Services is not responsible for any carrier charges.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>Message and data rates may apply for any messages sent to you from us and to us from you. Charges are determined by your mobile carrier and your individual service plan. Newark Tree Care is not responsible for any carrier charges.</p>
                   
                   <h4 style={{ color: '#ffffff', fontSize: '1rem', marginTop: '1rem', marginBottom: '0.25rem' }}>4d. How to Opt Out (STOP)</h4>
                   <p style={{ marginBottom: '1.25rem' }}>You can opt out of receiving SMS messages at any time by replying STOP to any message we send. After opting out, you will receive a one-time confirmation message and will no longer receive SMS messages from us unless you re-enroll.</p>
@@ -662,12 +662,11 @@ export default function BelowFold({
                   <h4 style={{ color: '#ffffff', fontSize: '1rem', marginTop: '1rem', marginBottom: '0.25rem' }}>4e. How to Get Help (HELP)</h4>
                   <p style={{ marginBottom: '1.25rem' }}>For help with our SMS program, reply HELP to any message or contact us directly at:</p>
                   <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.25rem', listStyleType: 'none' }}>
-                    <li><strong>Phone:</strong> 716-274-9576</li>
-                    <li><strong>Email:</strong> info@cityrootstreeservices.com</li>
+                    <li><strong>Phone:</strong> 510-545-8733</li>
                   </ul>
                   
                   <h4 style={{ color: '#ffffff', fontSize: '1rem', marginTop: '1rem', marginBottom: '0.25rem' }}>4f. Carrier Liability Disclaimer</h4>
-                  <p style={{ marginBottom: '1.25rem' }}>Mobile carriers are not liable for delayed or undelivered messages. City Roots Tree Services cannot guarantee delivery of SMS messages. Delivery of information through SMS may be subject to your mobile carrier’s capability and coverage area.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>Mobile carriers are not liable for delayed or undelivered messages. Newark Tree Care cannot guarantee delivery of SMS messages. Delivery of information through SMS may be subject to your mobile carrier’s capability and coverage area.</p>
                   
                   <h4 style={{ color: '#ffffff', fontSize: '1rem', marginTop: '1rem', marginBottom: '0.25rem' }}>4g. Supported Carriers</h4>
                   <p style={{ marginBottom: '1.25rem' }}>Our SMS program is supported by all major U.S. wireless carriers including AT&amp;T, Verizon, T-Mobile, and Sprint. Not all carriers are supported for all messages.</p>
@@ -676,40 +675,38 @@ export default function BelowFold({
                   <p style={{ marginBottom: '1.25rem' }}>We use cookies in accordance with our Privacy Policy to improve user experience and website functionality.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>6. Intellectual Property &amp; License</h3>
-                  <p style={{ marginBottom: '1.25rem' }}>Unless otherwise stated, City Roots Tree Services owns the intellectual property rights for all content on this website. You may not copy, reproduce, republish, sell, or redistribute any material without prior written permission.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>Unless otherwise stated, Newark Tree Care owns the intellectual property rights for all content on this website. You may not copy, reproduce, republish, sell, or redistribute any material without prior written permission.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>7. Comments &amp; User Content</h3>
-                  <p style={{ marginBottom: '1.25rem' }}>City Roots Tree Services reserves the right to monitor and remove any comments or user-generated content on our platforms that are inappropriate, offensive, or violate these terms.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>Newark Tree Care reserves the right to monitor and remove any comments or user-generated content on our platforms that are inappropriate, offensive, or violate these terms.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>8. Content Liability</h3>
-                  <p style={{ marginBottom: '1.25rem' }}>We are not responsible for content that appears on external websites linking to us. You agree to defend and protect City Roots Tree Services against any claims arising from your website or digital properties.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>We are not responsible for content that appears on external websites linking to us. You agree to defend and protect Newark Tree Care against any claims arising from your website or digital properties.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>9. Disclaimer</h3>
-                  <p style={{ marginBottom: '1.25rem' }}>To the maximum extent permitted by applicable law, City Roots Tree Services excludes all warranties, representations, and conditions relating to our website and services. We are not liable for any loss or damage (including, without limitation, damage for loss of business, profits, or revenue) arising from the use of our website or services.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>To the maximum extent permitted by applicable law, Newark Tree Care excludes all warranties, representations, and conditions relating to our website and services. We are not liable for any loss or damage (including, without limitation, damage for loss of business, profits, or revenue) arising from the use of our website or services.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>10. Changes to These Terms</h3>
                   <p style={{ marginBottom: '1.25rem' }}>We reserve the right to update these Terms and Conditions at any time. Changes will be posted on this page with a revised “Last Updated” date. Continued use of our website or services constitutes acceptance of the updated terms.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>11. Contact Information</h3>
                   <p style={{ background: 'rgba(255,255,255,0.05)', padding: '1.25rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', lineHeight: 1.6 }}>
-                    <strong>Company:</strong> City Roots Tree Services<br />
-                    <strong>Address:</strong> 9950 County Rd, Clarence Center, NY 14032<br />
-                    <strong>Phone:</strong> 716-274-9576<br />
-                    <strong>Email:</strong> info@cityrootstreeservices.com
+                    <strong>Company:</strong> Newark Tree Care<br />
+                    <strong>Address:</strong> 6821 Central Ave, Newark, CA 94560<br />
+                    <strong>Phone:</strong> 510-545-8733
                   </p>
                 </div>
               ) : (
                 <div>
                   <h2 style={{ color: '#ffffff', fontSize: '1.8rem', marginBottom: '0.5rem' }}>Privacy Policy</h2>
                   <div style={{ color: '#2dd4bf', fontSize: '0.85rem', fontWeight: 700, marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.75rem' }}>Effective Date: January 19, 2025 &nbsp;|&nbsp; Last Updated: July 9, 2026</div>
-                  <p style={{ marginBottom: '1.25rem' }}>City Roots Tree Services ("we," "our," or "us") is committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data in compliance with applicable U.S. data protection laws, including the California Consumer Privacy Act (CCPA) and the General Data Protection Regulation (GDPR) where applicable.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>Newark Tree Care ("we," "our," or "us") is committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data in compliance with applicable U.S. data protection laws, including the California Consumer Privacy Act (CCPA) and the General Data Protection Regulation (GDPR) where applicable.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>1. Information We Collect</h3>
                   <p style={{ marginBottom: '0.75rem' }}>We may collect the following categories of personal information when you contact us, request a quote, submit a web form, or use our services:</p>
                   <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.25rem', listStyleType: 'disc' }}>
                     <li>Full name</li>
                     <li>Mailing or service address</li>
-                    <li>Email address</li>
                     <li>Mobile phone number</li>
                     <li>Service request details and project descriptions</li>
                     <li>Communication history and preferences</li>
@@ -717,10 +714,10 @@ export default function BelowFold({
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>2. SMS / Text Message Communications</h3>
                   <h4 style={{ color: '#ffffff', fontSize: '1rem', marginTop: '1rem', marginBottom: '0.25rem' }}>2a. How We Collect Your Mobile Number</h4>
-                  <p style={{ marginBottom: '1.25rem' }}>We collect your mobile phone number when you voluntarily provide it through our website contact forms, phone calls, or other direct communication channels. By providing your mobile number and checking the SMS consent checkbox on our forms, you expressly consent to receive SMS (text message) communications from City Roots Tree Services.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>We collect your mobile phone number when you voluntarily provide it through our website contact forms, phone calls, or other direct communication channels. By providing your mobile number and checking the SMS consent checkbox on our forms, you expressly consent to receive SMS (text message) communications from Newark Tree Care.</p>
                   
                   <h4 style={{ color: '#ffffff', fontSize: '1rem', marginTop: '1rem', marginBottom: '0.25rem' }}>2b. Types of Messages We Send</h4>
-                  <p style={{ marginBottom: '0.75rem' }}>By opting in, you may receive recurring automated text messages from City Roots Tree Services, including:</p>
+                  <p style={{ marginBottom: '0.75rem' }}>By opting in, you may receive recurring automated text messages from Newark Tree Care, including:</p>
                   <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.25rem', listStyleType: 'disc' }}>
                     <li>Free estimate confirmations and appointment reminders</li>
                     <li>Project status updates and scheduling notifications</li>
@@ -732,16 +729,15 @@ export default function BelowFold({
                   <p style={{ marginBottom: '1.25rem' }}>Message frequency varies based on your interactions with us, ongoing service needs, and active promotions. You may receive up to 4–8 messages per month depending on your service activity.</p>
                   
                   <h4 style={{ color: '#ffffff', fontSize: '1rem', marginTop: '1rem', marginBottom: '0.25rem' }}>2d. Message &amp; Data Rates</h4>
-                  <p style={{ marginBottom: '1.25rem' }}>Message and data rates may apply. Charges are determined by your mobile carrier and your individual service plan. City Roots Tree Services is not responsible for any charges incurred from your mobile carrier.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>Message and data rates may apply. Charges are determined by your mobile carrier and your individual service plan. Newark Tree Care is not responsible for any charges incurred from your mobile carrier.</p>
                   
                   <h4 style={{ color: '#ffffff', fontSize: '1rem', marginTop: '1rem', marginBottom: '0.25rem' }}>2e. How to Opt Out (STOP)</h4>
-                  <p style={{ marginBottom: '1.25rem' }}>You may cancel SMS messages at any time by replying STOP to any text message you receive from us. After opting out, you will receive one final confirmation message and will no longer receive SMS communications from City Roots Tree Services unless you re-enroll.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>You may cancel SMS messages at any time by replying STOP to any text message you receive from us. After opting out, you will receive one final confirmation message and will no longer receive SMS communications from Newark Tree Care unless you re-enroll.</p>
                   
                   <h4 style={{ color: '#ffffff', fontSize: '1rem', marginTop: '1rem', marginBottom: '0.25rem' }}>2f. How to Get Help (HELP)</h4>
                   <p style={{ marginBottom: '1.25rem' }}>For help with our SMS program, reply HELP to any message, or contact us directly at:</p>
                   <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.25rem', listStyleType: 'none' }}>
-                    <li><strong>Phone:</strong> 716-274-9576</li>
-                    <li><strong>Email:</strong> info@cityrootstreeservices.com</li>
+                    <li><strong>Phone:</strong> 510-545-8733</li>
                   </ul>
                   
                   <div style={{ background: 'rgba(52,211,153,0.1)', border: '1.5px solid #2dd4bf', borderRadius: '14px', padding: '1.25rem', margin: '1.75rem 0' }}>
@@ -779,17 +775,16 @@ export default function BelowFold({
                     <li><strong>Opt-Out of SMS:</strong> Reply STOP to any text message at any time</li>
                     <li><strong>Opt-Out of Marketing:</strong> Contact us directly to be removed from marketing lists</li>
                   </ul>
-                  <p style={{ marginBottom: '1.25rem' }}>To exercise any of these rights, contact us at info@cityrootstreeservices.com or call 716-274-9576.</p>
+                  <p style={{ marginBottom: '1.25rem' }}>To exercise any of these rights, contact us at 510-545-8733.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>9. Changes to This Privacy Policy</h3>
                   <p style={{ marginBottom: '1.25rem' }}>We may update this Privacy Policy from time to time. We will post the updated policy on this page with a revised “Last Updated” date. Continued use of our website or services after any changes constitutes your acceptance of the updated policy.</p>
                   
                   <h3 style={{ color: '#5de8c8', fontSize: '1.15rem', marginTop: '1.5rem', marginBottom: '0.5rem' }}>10. Contact Information</h3>
                   <p style={{ background: 'rgba(255,255,255,0.05)', padding: '1.25rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', lineHeight: 1.6 }}>
-                    <strong>Company:</strong> City Roots Tree Services<br />
-                    <strong>Address:</strong> 9950 County Rd, Clarence Center, NY 14032<br />
-                    <strong>Phone:</strong> 716-274-9576<br />
-                    <strong>Email:</strong> info@cityrootstreeservices.com
+                    <strong>Company:</strong> Newark Tree Care<br />
+                    <strong>Address:</strong> 6821 Central Ave, Newark, CA 94560<br />
+                    <strong>Phone:</strong> 510-545-8733
                   </p>
                 </div>
               )}
