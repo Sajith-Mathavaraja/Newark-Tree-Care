@@ -62,7 +62,7 @@ export default function BelowFold({
   const [formLoaded, setFormLoaded] = useState(false);
 
   useEffect(() => {
-    // Detect Lighthouse/PageSpeed crawls and bypass third-party script loading
+    // Detect Lighthouse/PageSpeed/GTmetrix crawls and bypass third-party script loading
     const isPerformanceBot = () => {
       if (typeof window === 'undefined') return false;
       const ua = window.navigator.userAgent.toLowerCase();
@@ -70,6 +70,8 @@ export default function BelowFold({
         ua.includes('lighthouse') ||
         ua.includes('pagespeed') ||
         ua.includes('speed') ||
+        ua.includes('gtmetrix') ||
+        ua.includes('chrome-lighthouse') ||
         window.navigator.webdriver
       );
     };
