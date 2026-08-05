@@ -2,15 +2,12 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
-import cssInjectedByJs from 'vite-plugin-css-injected-by-js';
-
 const isNetlify = process.env.NETLIFY === 'true';
 const base = isNetlify ? '/' : '/Newark-Tree-Care/';
 
 export default defineConfig({
   plugins: [
     react(),
-    cssInjectedByJs(),
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: null,
