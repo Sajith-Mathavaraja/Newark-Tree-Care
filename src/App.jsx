@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { estateAvif } from './embeddedImages';
 // Only icons used in the above-fold render (header, hero, toast)
-import { Phone, ArrowRight, Sparkles } from './Icons';
+import { Phone, ArrowRight, Sparkles } from './AppIcons';
 
 // Lazy-load everything below the fold into a separate JS chunk.
 // This reduces initial bundle parse time, directly cutting TBT (Total Blocking Time).
@@ -327,8 +327,8 @@ export default function App() {
            <div className="hero-composition-wrapper">
             <div className="hero-main-frame">
                 <picture>
-                  <source media="(max-width: 600px)" srcSet="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif%2Cq_100%2Cw_1920/hero_arborist_q6wspn" />
-                  <source media="(min-width: 601px)" srcSet="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif%2Cq_100%2Cw_3840/hero_arborist_q6wspn" />
+                  <source media="(max-width: 600px)" srcSet="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_95,w_800/hero_arborist_q6wspn" />
+                  <source media="(min-width: 601px)" srcSet="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif,q_100,w_3840/hero_arborist_q6wspn" />
                   <img 
                     src="https://res.cloudinary.com/qzlxlo1n/image/upload/f_avif%2Cq_100%2Cw_3840/hero_arborist_q6wspn" 
                     alt="Professional Arborist at work in Newark" 
