@@ -1,0 +1,15 @@
+# Newark Tree Care
+
+> Professional tree care services in Newark, CA. Certified arborists specializing in tree trimming, tree removal, stump grinding, and 24/7 emergency response.
+
+## Services
+
+- [Tree Assessment & Consultation](https://preeminent-cucurucho-6e61cb.netlify.app/#services)
+- [Precision Tree Pruning & Trimming](https://preeminent-cucurucho-6e61cb.netlify.app/#services)
+- [Safe Tree Removal & Felling](https://preeminent-cucurucho-6e61cb.netlify.app/#services)
+- [Stump & Root Management](https://preeminent-cucurucho-6e61cb.netlify.app/#services)
+- [Emergency Tree Response](https://preeminent-cucurucho-6e61cb.netlify.app/#contact)
+
+## Contact
+
+- [Get Free Estimate](https://preeminent-cucurucho-6e61cb.netlify.app/#contact)
