@@ -73,12 +73,6 @@ export default function App() {
       if (loaded) return;
       loaded = true;
       setLoadBelowFold(true);
-      if (!document.querySelector('script[src*="kdlead.com"]')) {
-        const s = document.createElement('script');
-        s.src = 'https://link.kdlead.com/js/form_embed.js';
-        s.async = true;
-        document.body.appendChild(s);
-      }
       cleanup();
     };
 
