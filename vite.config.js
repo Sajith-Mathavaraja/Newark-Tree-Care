@@ -47,10 +47,11 @@ export default defineConfig({
           },
           {
             // JS and CSS bundles — CacheFirst is safe because Vite hashes filenames on every build
+            // Cache name bumped to v2 to evict old index-moiaPhzW.js (89kB) and serve new 30kB bundle
             urlPattern: /\/assets\/.+\.(js|css)(\?.*)?$/i,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'static-resources-v1',
+              cacheName: 'static-resources-v2',
               expiration: {
                 maxEntries: 20,
                 maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
