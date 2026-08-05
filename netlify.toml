@@ -5,10 +5,13 @@
 [build.environment]
   NPM_FLAGS = "--legacy-peer-deps"
 
-# ── Cache Headers ────────────────────────────────────────────────────────────
-# Vite hashes every asset filename on build, so immutable 1-year cache is safe.
-# This fixes the Lighthouse "Use efficient cache lifetimes" warning (was 10m TTL).
+# ── SPA Routing (Fixes 404 on page refresh for modal / sub-routes) ───────────
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
+# ── Cache Headers ────────────────────────────────────────────────────────────
 [[headers]]
   for = "/assets/*"
   [headers.values]
@@ -43,8 +46,3 @@
   for = "/manifest.webmanifest"
   [headers.values]
     Cache-Control = "public, max-age=86400"
-
-[[headers]]
-  for = "/"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
